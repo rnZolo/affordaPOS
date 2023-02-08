@@ -322,7 +322,7 @@ input {
     background-color: #121013;
     width: 250px;
     height: calc(100vh);
-    transform: translate(100%);
+    transform: translate(101%);
     text-align: center;
     overflow: hidden;
     margin-right: 0;
