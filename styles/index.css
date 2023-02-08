@@ -320,9 +320,9 @@ input {
     justify-content: start;
     top: 0px;
     background-color: #121013;
-    width: 250px;
+    width: 100%;
     height: calc(100vh);
-    transform: translate(101%);
+    transform: translate(-101%);
     text-align: center;
     overflow: hidden;
     margin-right: 0;
