@@ -90,7 +90,7 @@ h2 {
 .headline {
   width: 100%;
   height: 700px;
-  background-image: url(./resources/headline-bg.jpg);
+  background-image: url("../resources/headline-bg.jpg");
   background-size: cover;
   display: flex;
   flex-direction: column;
