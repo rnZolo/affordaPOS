@@ -7,7 +7,16 @@
     <!-- style -->
     <link rel="stylesheet" href="./styles/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
+    <!-- fonts -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <!-- fonts end -->
+
+    <!-- aos animation effect -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="./resources/logo.png">
     <title>AffordaPOS</title>
 </head>
@@ -15,7 +24,9 @@
     <!-- nav bar -->
     <div class="page-wrapper">
         <div class="nav-wrapper">
-            <nav class="navbar" id="mynav">
+            <nav class="navbar" 
+                id="mynav"
+                >
                 <img src="./resources/logo.png" alt="Company Logo" id="nav-logo" class="nav-logo">
                 <div class="menu-toggle" id="mobile-menu">
                     <span class="bar"></span>
@@ -23,19 +34,37 @@
                     <span class="bar"></span>
                 </div>
                 <ul class="nav no-search" id="nav">
-                    <li class="nav-item"><a id="a" href="#">Home</a></li>
-                    <li class="nav-item"><a id="a" href="#">About</a></li>
-                    <li class="nav-item"><a id="a" href="#">Services</a></li>
-                    <li class="nav-item"><a id="a" href="#">Clients</a></li>
-                    <li class="nav-item"><a id="a" href="#">Contact Us</a></li>
+                    <span>
+                        <li class="nav-item"><a id="a" href="#">Home</a></li>
+                    </span>
+                    <span>
+                        <li class="nav-item"><a id="a" href="#">About</a></li>
+                    </span>
+                    <span>
+                        <li class="nav-item"><a id="a" href="#">Services</a></li>
+                    </span>
+                    <span>
+                        <li class="nav-item"><a id="a" href="#">Clients</a></li>
+                    </span>
+                    <span>
+                        <li class="nav-item"><a id="a" href="#">Contact Us</a></li>
+                    </span>
                 </ul>
             </nav>
         </div>
     <!-- nav bar end -->
     <!-- sections -->
         <section class="headline">
-            <div class="custom-shape-divider-bottom-1675854955">
-                <!-- <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <div class="headline-section">
+                <div class="headline-text">
+                    <div class="head card">
+                        <h1 data-aos="fade-right" data-aos-duration="1000">INVEST IN YOUR BUSINESS GROWTH</h1>
+                        <p data-aos="fade-right" data-aos-duration="1000">“We provide solution to ease business management”</p>
+                    </div>
+                </div>
+            </div>
+            <div class="custom-shape-divider-bottom-1675919935">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path
                         d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
                         opacity=".25" class="shape-fill"></path>
@@ -45,17 +74,19 @@
                     <path
                         d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
                         class="shape-fill"></path>
-                </svg> -->
+                </svg>
             </div>
         </section>
+
         <section class="contact-us">
             
         </section>
     </div>
     <!-- javascript -->
     <script src="index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-
+        AOS.init();
     </script>
 </body>
 </html>

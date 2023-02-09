@@ -8,7 +8,7 @@ $('.menu-toggle').click(function(){
 window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-        document.getElementById("mynav").style.backgroundColor = "#121013";
+        document.getElementById("mynav").style.backgroundColor = "#F1F1F1";
     } else {
         document.getElementById("mynav").style.backgroundColor = "transparent";
     }
