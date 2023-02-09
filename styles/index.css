@@ -329,10 +329,10 @@ input {
   background-size: cover;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   position: relative;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .headline-section
@@ -347,6 +347,7 @@ input {
 
 .headline-text
 {
+  padding-top: 100px;
   width: 70%;
 }
 
@@ -371,7 +372,7 @@ input {
   border-radius: 50%;
   border:solid 30px #F1F1F1;
   right: -100px;
-  bottom: 70px;
+  bottom: 80px;
   z-index: 0;
 }
 
@@ -422,6 +423,14 @@ input {
 }
 
 @media only screen and (max-width: 900px)
+{
+  .headline-img
+  {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 776px)
 {
   .headline-img
   {
