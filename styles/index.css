@@ -5,12 +5,18 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* HEADINGS */
+body::-webkit-scrollbar {
+  display: none;
+}
 
 body{
   background-color: #F1F1F1;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
+
+/* HEADINGS */
 h1, p {
   color: #fff;
   text-align: center;
@@ -82,20 +88,22 @@ h2 {
 }
 
 .nav-item a:hover {
-  color: #3498db;
+  color: #FDB827;
 }
 
 /* SECTIONS */
 
 .headline {
   width: 100%;
-  height: 700px;
-  background-image: url("../resources/headline-bg.jpg");
+  height: 100vh;
+  background-image: url("../resources/headline-bg3.jpg");
+  background-position: center;
   background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
   position: relative;
+  overflow-x: hidden;
 }
 
 .custom-shape-divider-bottom-1675854955 {
