@@ -572,13 +572,13 @@ input {
 .services
 {
   width: 100%;
-  height: 500px;
+  height: fit-content;
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #FDB827;
-  border-radius: 30% 0% 0% 0% / 30% 0% 0% 0%;
+  border-radius: 100px 0% 0% 0% / 100px 0% 0% 0%;
   overflow: hidden;
 }
 
@@ -588,6 +588,7 @@ input {
   display: flex;
   flex-direction: row;
   padding-top: 20px;
+  z-index: 1;
 }
 
 .services .heading-goal
@@ -603,10 +604,74 @@ input {
 
 .services .head-highlight
 {
-  font-family: "";
   color: #F1F1F1;
   font-family: 'Archivo Black', sans-serif;
   font-size: 35px;
+}
+
+.services-info
+{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  z-index: 1;
+}
+
+.services-text
+{
+  width: 50%;
+}
+
+.services-img
+{
+  width: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.services-img img
+{
+  width: 100%;
+}
+
+.services-text img
+{
+  width: 100%;
+  border-radius: 20px;
+}
+
+.services-text button {
+  cursor: pointer;
+  font-weight: 700;
+  font-family: Helvetica,"sans-serif";
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #F1F1F1;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.services-text button:hover {
+  background: #F1F1F1;
+}
+
+.services-text button > svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+}
+
+.services-text button:hover svg {
+  transform: translateX(5px);
+}
+
+.services-text button:active {
+  transform: scale(0.95);
 }
 
 @media only screen and (max-width: 720px) 
@@ -629,4 +694,25 @@ input {
     width: 100%;
     text-align: right;
   }
+
+  .services-info
+  {
+    width: 90%;
+    flex-direction: column;
+  }
+  .services-img
+  {
+    width: 100%;
+  }
+  .services-text
+  {
+    width: 100%;
+  }
+}
+
+/* CLIENTS */
+.clients
+{
+  width: 100%;
+  height: 500px;
 }
