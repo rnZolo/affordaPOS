@@ -585,6 +585,19 @@ input {
 .services .heading
 {
   width: 80%;
+  display: flex;
+  flex-direction: row;
+  padding-top: 20px;
+}
+
+.services .heading-goal
+{
+  width: 50%;
+}
+
+.services .heading-text
+{
+  width: 50%;
   text-align: right;
 }
 
@@ -601,5 +614,19 @@ input {
   .services .heading
   {
     width: 90%;
+    flex-direction: column;
+  }
+
+  .services .heading-text
+  {
+    order: 1;
+    width: 100%;
+  }
+
+  .services .heading-goal
+  {
+    order: 2;
+    width: 100%;
+    text-align: right;
   }
 }
