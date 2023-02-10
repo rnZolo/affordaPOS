@@ -454,7 +454,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
 }
@@ -851,4 +851,139 @@ input {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+/* MEET THE TEAM */
+.team
+{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-bottom: 30px;
+  padding-top: 30px;
+}
+
+.team .head-highlight
+{
+  color: #21209C;
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 35px;
+}
+
+.team-info, .team .heading-text
+{
+  width: 80;
+}
+
+.team .heading-text
+{
+  text-align: center;
+}
+
+.team-info
+{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-top: 20px;
+  justify-content: center;
+  height: fit-content;
+  width: 80%;
+}
+
+.card {
+ width: 250px;
+ height: 300px;
+ background: #f5f5f5;
+ padding: 2rem 1.5rem;
+ transition: box-shadow .3s ease, transform .2s ease;
+  box-shadow: 0 8px 20px #23232333;
+  cursor: pointer;
+}
+
+.card-info {
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ transition: transform .2s ease, opacity .2s ease;
+}
+
+/*Image*/
+.card-avatar {
+ --size: 120px;
+ background: linear-gradient(to top, #f1e1c1 0%, #fcbc97 100%);
+ width: var(--size);
+ height: var(--size);
+ border-radius: 50%;
+ transition: transform .2s ease;
+ margin-bottom: 1rem;
+}
+
+
+/*Card footer*/
+.card-social {
+ transform: translateY(200%);
+ display: flex;
+ justify-content: space-around;
+ width: 100%;
+ opacity: 0;
+ transition: transform .2s ease, opacity .2s ease;
+}
+
+.card-social__item {
+ list-style: none;
+}
+
+.card-social__item svg {
+ display: block;
+ height: 18px;
+ width: 18px;
+ fill: #515F65;
+ cursor: pointer;
+ transition: fill 0.2s ease ,transform 0.2s ease;
+}
+
+/*Text*/
+.card-title {
+ color: #333;
+ font-size: 1.5em;
+ font-weight: 600;
+ line-height: 2rem;
+ text-align: center;
+}
+
+.card-subtitle {
+ color: #859ba8;
+ font-size: 0.8em;
+}
+
+/*Hover*/
+.card:hover .card-info {
+ transform: translateY(-5%);
+}
+
+.card:hover .card-social {
+ transform: translateY(100%);
+ opacity: 1;
+}
+
+.card-social__item svg:hover {
+ fill: #232323;
+ transform: scale(1.1);
+}
+
+.card-avatar:hover {
+ transform: scale(1.1);
+}
+
+@media only screen and (max-width: 720px)
+{
+  .team-info, .team .heading-text
+  {
+    width: 90%;
+  }
 }
