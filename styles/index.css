@@ -486,6 +486,7 @@ input {
   color: #21209C;
   font-family: 'Archivo Black', sans-serif;
   font-size: 35px;
+  margin-bottom: 20px;
 }
 
 .about-img
@@ -586,7 +587,8 @@ input {
   width: 80%;
   display: flex;
   flex-direction: row;
-  padding-top: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   z-index: 1;
 }
 
@@ -637,6 +639,8 @@ input {
 {
   width: 100%;
   border-radius: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 .services-text button {
@@ -745,6 +749,7 @@ input {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  margin-top: 20px;
 }
 
 .packages-info img
