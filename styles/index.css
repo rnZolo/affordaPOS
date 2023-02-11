@@ -907,6 +907,7 @@ input {
  transition: box-shadow .3s ease, transform .2s ease;
   box-shadow: 0 8px 20px #23232333;
   cursor: pointer;
+  border-radius: 20px;
 }
 
 .card-info {
