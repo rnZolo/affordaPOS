@@ -896,7 +896,7 @@ input {
 
 .card {
  width: 250px;
- height: 300px;
+ height: 340px;
  background: #f5f5f5;
  padding: 2rem 1.5rem;
  transition: box-shadow .3s ease, transform .2s ease;
