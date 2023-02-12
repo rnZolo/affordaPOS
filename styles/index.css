@@ -44,7 +44,7 @@ body {
 
 .navbar {
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 3fr 0.1fr;
   align-items: center;
   height: 70px;
   width: 100%;
@@ -1197,4 +1197,87 @@ ul {
   .get_form_inner {
     padding: 30px 20px;
   }
+}
+
+/* darkmode */
+.light-mode-button {
+    background: 0;
+    border: 0;
+    box-sizing: border-box;
+    cursor: pointer;
+    height: 40px;
+    width: 70px;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0);
+    margin-right: 20px;
+}
+
+.light-mode-button:focus {
+    outline: none; /* Not ideal for accessibility */
+}
+
+.light-mode-button span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 70px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #d6d7db;
+    box-shadow: inset 1px 1px 3px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+.light-mode-button span:nth-child(2) {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 30px;
+    height: 30px;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 1px 1px 2px 0 rgb(0 0 0 / 40%);
+    transition: 0.3s;
+}
+
+/* Light & Dark Mode Styles
+		--------------------------- */
+body[light-mode="dark"] .light-mode-button span:nth-child(1) {
+    background-color: #ced4e2;
+    color: #141516;
+}
+
+body[light-mode="dark"] .light-mode-button span:nth-child(2) {
+    left: 35px;
+    background-color: #141516;
+}
+
+body[light-mode="dark"] {
+    background-color: #121013;
+    transition: 0.5s;
+}
+
+
+body[light-mode="dark"] .about p {
+    color: #f1f1f1;
+    transition: 0.5s;
+}
+
+body[light-mode="dark"] .custom-shape-divider-bottom-1675919935 .shape-fill{
+    fill: #121013;
+    transition: 0.5s;
+}
+
+body[light-mode="dark"] .contact-us p, 
+body[light-mode="dark"] .contact-us h1, 
+body[light-mode="dark"] .contact-us h3, 
+body[light-mode="dark"] .about h1
+{
+  color: #F1F1F1;
+  transition: 0.5s;
+}
+
+body[light-mode="dark"] .headline{
+  background-image: url("../resources/headline-bg-dark.jpg");
+  transition: 0.5s;
 }
