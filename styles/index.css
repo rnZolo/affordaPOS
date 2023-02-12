@@ -626,7 +626,6 @@ input {
 .services-text button {
   cursor: pointer;
   font-weight: 700;
-  font-family: Helvetica, "sans-serif";
   transition: all .2s;
   padding: 10px 20px;
   border-radius: 100px;
@@ -700,6 +699,7 @@ input {
   background-color: #21209C;
   overflow: hidden;
   position: relative;
+    border-radius: 0% 0% 100px 0% / 0% 0% 100px 0%;
 }
 
 .packages .heading-text {
