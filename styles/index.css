@@ -1097,7 +1097,7 @@ textarea {
   margin-bottom: 40px;
 }
 
-input[type="submit"] {
+button[type="submit"] {
   display: inline-block;
   font-size: 16px;
   text-transform: uppercase;
@@ -1115,7 +1115,7 @@ input[type="submit"] {
   -o-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
 
-input[type="submit"]:hover {
+button[type="submit"]:hover {
   background-color: #f85508;
   border-color: #f85508;
   color: #fff;
