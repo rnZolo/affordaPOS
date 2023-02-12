@@ -1277,7 +1277,17 @@ body[light-mode="dark"] .about h1
   transition: 0.5s;
 }
 
-body[light-mode="dark"] .headline{
-  background-image: url("../resources/headline-bg-dark.jpg");
+.dim
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #121013;
+  opacity: calc(20%);
+  display: none;
+}
+
+body[light-mode="dark"] .headline .dim{
+  display: block;
   transition: 0.5s;
 }
