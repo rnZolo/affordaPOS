@@ -7,11 +7,21 @@ $('.menu-toggle').click(function(){
 // Nav effect
 window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
-        if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    if (localStorage.lightMode == "light") {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
             document.querySelector(".navbar").style.backgroundColor = "#F1F1F1";
         } else {
             document.querySelector(".navbar").style.backgroundColor = "transparent";
         }
+    }
+    else
+    {
+        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+            document.querySelector(".navbar").style.backgroundColor = "#121013";
+        } else {
+            document.querySelector(".navbar").style.backgroundColor = "transparent";
+        }
+    }
 }
 
 // Modal Setup
@@ -45,9 +55,29 @@ function toggle_light_mode() {
     if (localStorage.lightMode == "dark") {
         localStorage.lightMode = "light";
         app.setAttribute("light-mode", "light");
+        document.querySelector(".navbar").style.backgroundColor = "#F1F1F1";
+        document.getElementById("h").style.color = "#121013";
+        document.getElementById("p").style.color = "#121013";
+        document.getElementById("f").style.color = "#121013";
+        document.getElementById("cl").style.color = "#121013";
+        document.getElementById("co").style.color = "#121013";
+        document.getElementById("bar1").style.backgroundColor = "#121013";
+        document.getElementById("bar2").style.backgroundColor = "#121013";
+        document.getElementById("bar3").style.backgroundColor = "#121013";
+        document.getElementById("nav").style.backgroundColor = "#F1F1F1";
     } else {
         localStorage.lightMode = "dark";
         app.setAttribute("light-mode", "dark");
+        document.querySelector(".navbar").style.backgroundColor = "#121013";
+        document.getElementById("h").style.color = "#F1F1F1";
+        document.getElementById("p").style.color = "#F1F1F1";
+        document.getElementById("f").style.color = "#F1F1F1";
+        document.getElementById("cl").style.color = "#F1F1F1";
+        document.getElementById("co").style.color = "#F1F1F1";
+        document.getElementById("bar1").style.backgroundColor = "#F1F1F1";
+        document.getElementById("bar2").style.backgroundColor = "#F1F1F1";
+        document.getElementById("bar3").style.backgroundColor = "#F1F1F1";
+        document.getElementById("nav").style.backgroundColor = "#121013";
     }
 }
 

@@ -7,6 +7,7 @@
     <!-- style -->
     <link rel="stylesheet" href="./styles/index.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     
     <!-- fonts -->
     <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
@@ -27,27 +28,27 @@
             <nav class="navbar" 
                 id="mynav"
                 >
-                <img src="./resources/logo.png" alt="Company Logo" id="nav-logo" class="nav-logo">
+                <img src="./resources/logo.png" onclick="location.href='#home'" alt="Company Logo" id="nav-logo" class="nav-logo">
                 <div class="menu-toggle" id="mobile-menu">
-                    <span class="bar"></span>
-                    <span class="bar"></span>
-                    <span class="bar"></span>
+                    <span class="bar" id="bar1"></span>
+                    <span class="bar" id="bar2"></span>
+                    <span class="bar" id="bar3"></span>
                 </div>
                 <ul class="nav no-search" id="nav">
                     <span>
-                        <li class="nav-item"><a id="a" href="#home">Home</a></li>
+                        <li class="nav-item"><a id="h" href="#home">Home</a></li>
                     </span>
                     <span>
-                        <li class="nav-item"><a id="a" href="#about">About</a></li>
+                        <li class="nav-item"><a id="p" href="#packages">Packages</a></li>
                     </span>
                     <span>
-                        <li class="nav-item"><a id="a" href="#services">Services</a></li>
+                        <li class="nav-item"><a id="f" href="#feature">Features</a></li>
                     </span>
                     <span>
-                        <li class="nav-item"><a id="a" href="#">Clients</a></li>
+                        <li class="nav-item"><a id="cl" href="#clients">Clients</a></li>
                     </span>
                     <span>
-                        <li class="nav-item"><a id="a" href="#contact">Contact Us</a></li>
+                        <li class="nav-item"><a id="co" href="#contact">Contact Us</a></li>
                     </span>
                 </ul>
                 <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
@@ -56,241 +57,18 @@
                 </button>
             </nav>
         </div>
-    <!-- nav bar end -->
-    <!-- sections -->
-        <section class="headline" id="home">
-            <div class="dim">
+        <!-- nav bar end -->
+        <!-- sections -->
+        <!-- HEADLINE -->
+        <div class="headline" id="home">
 
-            </div>
-            <div class="headline-section">
-                <div class="headline-text">
-                    <div class="head-card">
-                        <h1 data-aos="fade-right" data-aos-duration="1000">INVEST IN YOUR BUSINESS GROWTH</h1>
-                        <p data-aos="fade-right" data-aos-duration="1000">“We provide solution to ease business management”</p>
-                    </div>
-                </div>
-            </div>
-            <img data-aos="zoom-in-up" data-aos-duration="1000" src="./resources/headline-img.jpg" alt="" srcset="" class="headline-img">
-            <div class="custom-shape-divider-bottom-1675919935">
-                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                    <path
-                        d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z"
-                        opacity=".25" class="shape-fill" id="shape-fill"></path>
-                    <path
-                        d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z"
-                        opacity=".5" class="shape-fill" id="shape-fill"></path>
-                    <path
-                        d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"
-                        class="shape-fill" id="shape-fill"></path>
-                </svg>
-            </div>
-        </section>
-        <br>
-
-        <section class="about" id="about">
-            <div class="about-child">
-                <div class="about-text">
-                    <h1>WHO WE ARE</h1>
-                    <h2 data-aos="fade-right" data-aos-duration="1000" class="head-highlight">One of the leading companies in the future.</h2>
-                    <p data-aos="fade-up" data-aos-duration="1000"><strong>Afforda-POS</strong> est. 2019, provides hardware & software products to business owners to manage their business in a friendly,
-                    easy, and timely manner.
-                    Our software focuses on POINT OF SALE that can manage Inventory, Sales, Expenses, and Store Reports. We provide solution
-                    to ease business management.</p>
-                    <p data-aos="fade-up" data-aos-duration="1000">Afforda-POS is owned by TechnoPOS Computer Store. <strong>TechnoPOS Computer Store</strong> manages and operates two (2) online businesses that both offer computerware: TechnoPhil Trading
-                    and Afforda-POS.
-                    In this era of technology driven market, it's critical to keep up and our team is here to help clients thru innovation
-                    and solution.</p>
-                    <p data-aos="fade-up" data-aos-duration="1000"><strong>TechnoPhil Computer Trading</strong> est. 2016, provides hardware products such as:
-                    Computer Parts, Accessories and Peripherals,
-                    High End Gaming Computer,
-                    Office Computer,
-                    Home and School Computer,
-                    Computer Services</p>
-                    <div class="about-logo" data-aos="fade-up" data-aos-duration="1000">
-                        <img src="./resources/logo.png" alt="">
-                        <img src="./resources/logo2.png" alt="">
-                    </div>
-                </div>
-                <div class="about-img">
-                    <img data-aos="fade-up" data-aos-duration="1000" src="./resources/about-img.svg" alt="" srcset="">
-                    <button onclick="location.href='#services'" data-aos="fade-up" data-aos-duration="1000">
-                        <span>Our Services</span>
-                        <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
-                            <path
-                                d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
-                                fill="black"></path>
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <!-- MEET THE TEAM -->
-            <div class="team">
-                <div class="heading-text">
-                    <h2 data-aos="fade-down" data-aos-duration="1000" class="head-highlight">Meet Our Team</h2>
-                </div>
-                <div class="team-info">
-                    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="card-info">
-                            <div class="card-avatar"></div>
-                            <div class="card-title">Adrian Binuya</div>
-                            <div class="card-subtitle">CEO</div>
-                        </div>
-                        <ul class="card-social">
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z">
-                                    </path>
-                                </svg>
-                            </li>
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z">
-                                    </path>
-                                </svg>
-                            </li>
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z">
-                                    </path>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="card-info">
-                            <div class="card-avatar"></div>
-                            <div class="card-title">Theresa Binuya</div>
-                            <div class="card-subtitle">Operational Manager</div>
-                        </div>
-                        <ul class="card-social">
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z">
-                                    </path>
-                                </svg>
-                            </li>
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z">
-                                    </path>
-                                </svg>
-                            </li>
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z">
-                                    </path>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="card-info">
-                            <div class="card-avatar"></div>
-                            <div class="card-title">Kate Ramos</div>
-                            <div class="card-subtitle">Admin Tech. Support</div>
-                        </div>
-                        <ul class="card-social">
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z">
-                                    </path>
-                                </svg>
-                            </li>
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z">
-                                    </path>
-                                </svg>
-                            </li>
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z">
-                                    </path>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="card-info">
-                            <div class="card-avatar"></div>
-                            <div class="card-title">John Livee</div>
-                            <div class="card-subtitle">System Developer</div>
-                        </div>
-                        <ul class="card-social">
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z">
-                                    </path>
-                                </svg>
-                            </li>
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z">
-                                    </path>
-                                </svg>
-                            </li>
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z">
-                                    </path>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="card" data-aos="fade-up" data-aos-duration="1000">
-                        <div class="card-info">
-                            <div class="card-avatar"></div>
-                            <div class="card-title">Nathaniel Tamayo</div>
-                            <div class="card-subtitle">Sales Technician</div>
-                        </div>
-                        <ul class="card-social">
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M14 9h3l-.375 3H14v9h-3.89v-9H8V9h2.11V6.984c0-1.312.327-2.304.984-2.976C11.75 3.336 12.844 3 14.375 3H17v3h-1.594c-.594 0-.976.094-1.148.281-.172.188-.258.5-.258.938V9z">
-                                    </path>
-                                </svg>
-                            </li>
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M20.875 7.5v.563c0 3.28-1.18 6.257-3.54 8.93C14.978 19.663 11.845 21 7.938 21c-2.5 0-4.812-.687-6.937-2.063.5.063.86.094 1.078.094 2.094 0 3.969-.656 5.625-1.968a4.563 4.563 0 0 1-2.625-.915 4.294 4.294 0 0 1-1.594-2.226c.375.062.657.094.844.094.313 0 .719-.063 1.219-.188-1.031-.219-1.899-.742-2.602-1.57a4.32 4.32 0 0 1-1.054-2.883c.687.328 1.375.516 2.062.516C2.61 9.016 1.938 7.75 1.938 6.094c0-.782.203-1.531.609-2.25 2.406 2.969 5.515 4.547 9.328 4.734-.063-.219-.094-.562-.094-1.031 0-1.281.438-2.36 1.313-3.234C13.969 3.437 15.047 3 16.328 3s2.375.484 3.281 1.453c.938-.156 1.907-.531 2.907-1.125-.313 1.094-.985 1.938-2.016 2.531.969-.093 1.844-.328 2.625-.703-.563.875-1.312 1.656-2.25 2.344z">
-                                    </path>
-                                </svg>
-                            </li>
-                            <li class="card-social__item">
-                                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                    <path
-                                        d="M19.547 3c.406 0 .75.133 1.031.398.281.266.422.602.422 1.008v15.047c0 .406-.14.766-.422 1.078a1.335 1.335 0 0 1-1.031.469h-15c-.406 0-.766-.156-1.078-.469C3.156 20.22 3 19.86 3 19.453V4.406c0-.406.148-.742.445-1.008C3.742 3.133 4.11 3 4.547 3h15zM8.578 18V9.984H6V18h2.578zM7.36 8.766c.407 0 .743-.133 1.008-.399a1.31 1.31 0 0 0 .399-.96c0-.407-.125-.743-.375-1.009C8.14 6.133 7.813 6 7.406 6c-.406 0-.742.133-1.008.398C6.133 6.664 6 7 6 7.406c0 .375.125.696.375.961.25.266.578.399.984.399zM18 18v-4.688c0-1.156-.273-2.03-.82-2.624-.547-.594-1.258-.891-2.133-.891-.938 0-1.719.437-2.344 1.312V9.984h-2.578V18h2.578v-4.547c0-.312.031-.531.094-.656.25-.625.687-.938 1.312-.938.875 0 1.313.578 1.313 1.735V18H18z">
-                                    </path>
-                                </svg>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <br>
-
-        <section id="services" class="services">
-            <br>
+        </div>
+        <!-- SERVICES -->
+        <section class="services">
             <div class="heading">
                 <div class="heading-goal">
-                    <p data-aos="fade-up" data-aos-duration="1000">Our company’s goals are to provide affordable but quality products to clients and to provide excellent customer
-                        and technical support.</p>
+                    <p data-aos="fade-up" data-aos-duration="1000">“Our company’s goals are to provide affordable but quality products to clients and to provide excellent customer
+                        and technical support.”</p>
                 </div>
                 <div class="heading-text">
                     <h1>WHAT WE DO</h1>
@@ -330,7 +108,7 @@
             </div>
         </section>
 
-        <section class="packages">
+        <section class="packages" id="packages">
             <div class="heading-text">
                 <h1>PACKAGES</h1>
                 <h2 data-aos="fade-right" data-aos-duration="1000" class="head-highlight">Our Products</h2>
@@ -340,6 +118,171 @@
                 <img class="modal-target" data-aos="fade-up" data-aos-duration="1000" src="./resources/package2.jpg" alt="" srcset="">
                 <img class="modal-target" data-aos="fade-up" data-aos-duration="1000" src="./resources/package3.jpg" alt="" srcset="">
                 <img class="modal-target" data-aos="fade-up" data-aos-duration="1000" src="./resources/package4.jpg" alt="" srcset="">
+            </div>
+        </section>
+
+        <!-- features -->
+        <section class="feature" id="feature">
+            <div class="heading-text">
+                <h1>FEATURES</h1>
+                <h2 data-aos="fade-left" data-aos-duration="1000" class="head-highlight">Ease your business management</h2>
+            </div>
+            <div class="features-info">
+                <div class="features-item">
+                    <div class="header"><i class="bi bi-percent"></i>
+                        <ul class="banner">
+                            <li>D</li>
+                            <li>I</li>
+                            <li>S</li>
+                            <li>C</li>
+                            <li>O</li>
+                            <li>U</li>
+                            <li>N</li>
+                            <li>T</li>
+                            <li>S</li>
+                        </ul>
+                    </div>
+                    <ul class="list-features">
+                        <li> 🔹 Item Percent Surcharge</li>
+                         <li>🔹 Senior Citizen Discount</li>    
+                        <li>🔹 Discount Per Item </li>
+                         <li>🔹 Membership </li>
+                         <li>🔹Point per customer </li>
+                         <li>🔹 Customer management</li>
+                     </ul>
+                </div>
+                <div class="features-item">
+                    <div class="header"><i class="fa-sharp fa-regular fa-money-bills"></i> <!--fontawesome not linked-->
+                        <ul class="banner">
+                            <li>C</li>
+                            <li>A</li>
+                            <li>S</li>
+                            <li>H</li>
+                        <br>
+                            <li>F</li>
+                            <li>L</li>
+                            <li>O</li>
+                            <li>W</li>
+                        </ul>
+                    </div>
+                    <ul class="list-features">
+                        <li> 🔹 Pay In/Pay Out </li>
+                         <li>🔹 Expensest</li>    
+                        <li>🔹 Pay Later</li>
+                         <li>🔹 Payment Options</li>
+                     </ul>
+                </div>
+                <div class="features-item">
+                    <div class="header"><i class="bi bi-list-check"></i>
+                        <ul class="banner">
+                            <li>I</li>
+                            <li>N</li>
+                            <li>V</li>
+                            <li>E</li>
+                            <li>N</li>
+                            <li>T</li>
+                            <li>O</li>
+                            <li>R</li>
+                            <li>Y</li>
+                        </ul>
+                    </div>
+                    <ul class="list-features">
+                        <li> 🔹 Inventory Warehouse </li>
+                         <li>🔹 Inventory Vendor </li>    
+                        <li>🔹 Purchase Inventory  </li>
+                         <li>🔹  Return Inventory</li>
+                         <li>🔹 Adjust Inventory  </li>
+                         <li>🔹 Count Inventory</li>
+                         <li>🔹 Adjust Cost </li>
+                         <li>🔹 Analyze Inventory</li>
+                         <li>🔹 Operation Records</li>
+                     </ul>
+                </div>
+                <div class="features-item">
+                    <div class="header"><i class="bi bi-list-check"></i>
+                        <ul class="banner">
+                            <li>S</li>
+                            <li>E</li>
+                            <li>T</li>
+                            <li>U</li>
+                            <li>P</li>
+                        </ul>
+                    </div>
+                    <ul class="list-features">
+                        <li> 🔹 Terminal Configuration </li>
+                         <li>🔹 Invoice Header & Footer  with logo (optional) </li>    
+                        <li>🔹 Printer Settings  </li>
+                         <li>🔹  User Access Definition</li>
+                         <li>🔹 User Security </li>
+                         <li>🔹 Database</li>
+                         <li>🔹 Auto Back up  </li>
+                         <li>🔹 Restore Database</li>
+                         <li>🔹 Email Database </li>
+                         <li>🔹 Restore Sample</li>
+                     </ul>
+                </div>
+                <div class="features-item">
+                    <div class="header"><i class="fa-duotone fa-gears"></i> <!--fontawesome not linked-->
+                        <ul class="banner">
+                            <li>R</li>
+                            <li>E</li>
+                            <li>P</li>
+                            <li>O</li>
+                            <li>R</li>
+                            <li>T</li>
+                            <li>S</li>
+                        </ul>
+                    </div>
+                    <ul class="list-features">
+                        <li> 🔹 Company Report</li>
+                         <li>🔹 Sales Report</li>    
+                         <li>🔹 Payment  </li>
+                         <li>🔹  Discounts</li>
+                         <li>🔹 Cash Sales</li>
+                         <li>🔹 Staff Sales</li>
+                         <li>🔹 Auto Back up  </li>
+                         <li>🔹 Cashier</li>
+                         <li>🔹 Delivery Reports </li>
+                         <li>🔹 Profit</li>
+                         <li>🔹 Expenses</li>
+                         <li>🔹 Cash Close Out</li>
+                         <li>🔹 Statistics</li>
+                         <li>🔹 Category Amount</li>
+                         <li>🔹 Category Quantity</li>
+                         <li>🔹 Item Purchase</li>
+                         <li>🔹 Inventory</li>
+                         <li>🔹 Staff Report</li>
+                         <li>🔹 Payment</li>
+                         <li>🔹 Cash Sales</li>  
+                     </ul>
+                </div>
+                <div class="features-item">
+                    <div class="header"><i class="bi bi-three-dots-vertical"></i>
+                        <ul class="banner">
+                            <li>O</li>
+                            <li>T</li>
+                            <li>H</li>
+                            <li>E</li>
+                            <li>R</li>
+                        </ul>
+                    </div>
+                    <ul class="list-features">
+                        <li> 🔹 Price Override</li>
+                         <li>🔹 Reprint Receipt</li>    
+                        <li>🔹 Open Drawer</li>
+                     </ul>
+                </div>
+            </div>
+         </section>
+
+        <!-- CLIENTS -->
+        <section class="clients" id="clients">
+            <div class="heading-text">
+                <h1>CLIENTS</h1>
+                <h2 data-aos="fade-right" data-aos-duration="1000" class="head-highlight">Our Clients love us</h2>
+            </div>
+            <div class="clients-info">
+
             </div>
         </section>
 
@@ -367,7 +310,10 @@
                                     </div>
                                     <div class="grid-full">
                                         <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
-                                        <button type="submit">Send</button>
+                                        <button data-aos="fade-up" data-aos-duration="1000" type="submit">
+                                            <span>Send</span>
+                                            <i class="bi bi-send"></i>
+                                        </button>
                                     </div>
                                 </form>
                             </div>
@@ -376,23 +322,20 @@
                             <h5>Say Hi!</h5>
                             <ul class="get_say_info_sec">
                                 <li>
-                                    <i class="fa fa-envelope"></i>
                                     <a href="mailto:">affordaPOS@gmail.com</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-whatsapp"></i>
                                     <a href="tel:">09498408417</a>
                                 </li>
                                 <li>
-                                    <i class="fa fa-skype"></i>
                                     <a href="#">AffordaPOS</a>
                                 </li>
-                            </ul>
-                            <ul class="get_say_social-icn">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                <div class="socmed">
+                                    <a href=""><i class="bi bi-facebook"></i></a>
+                                    <a href=""><i class="bi bi-tiktok"></i></a>
+                                    <a href=""><i class="bi bi-instagram"></i></a>
+                                    <a href=""><i class="bi bi-twitter"></i></a>
+                                </div>
                             </ul>
                         </div>
                     </div>
