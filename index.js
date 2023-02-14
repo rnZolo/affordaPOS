@@ -104,3 +104,33 @@ $(document).ready(function(){
         }
     });
 })
+
+// loader
+
+document.onreadystatechange = function () {
+    var state = document.readyState
+    if (state == 'complete') {
+        setTimeout(function () {
+            jQuery(document).ready(function() {
+                jQuery('#loader').fadeOut(500);
+                jQuery("#mybody").fadeIn(500);
+            });
+            document.getElementById("mybody").style.overflowY = "scroll";
+        }, 1500);
+        // for wip modal show
+        setTimeout(function () {
+            jQuery(document).ready(function() {
+                jQuery(".modal-wip").fadeIn(500);
+            });
+        }, 5000);
+    }
+    else
+    {
+        document.getElementById("mybody").style.overflowY = "hidden";
+    }
+}
+
+document.getElementById("exit-btn").addEventListener("click", HideWipModal);
+function HideWipModal(){
+    jQuery(".modal-wip").fadeOut(500);
+}
