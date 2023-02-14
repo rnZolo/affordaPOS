@@ -1,8 +1,40 @@
 // responsive nav bar
-$('.menu-toggle').click(function(){
-   $(".nav").toggleClass("mobile-nav");
-   $(this).toggleClass("is-active");
+$('.menu-toggle').click(function () {
+    $(".nav").toggleClass("mobile-nav");
+    $(this).toggleClass("is-active");
+    f.style.display = "none";
+    cl.style.display = "none";
 });
+
+// drop-down features
+document.querySelector("#f").addEventListener("click", Features);
+var f = document.querySelector(".drop-down-features");
+function Features() {
+    if (f.style.display === "none")
+    {
+        f.style.display = "block";
+        cl.style.display = "none";
+    }
+    else
+    {
+        f.style.display = "none";
+    }
+}
+
+// drop-down clients
+document.querySelector("#cl").addEventListener("click", Clients);
+var cl = document.querySelector(".drop-down-clients");
+function Clients() {
+    if (cl.style.display === "none")
+    {
+        cl.style.display = "block";
+        f.style.display = "none";
+    }
+    else
+    {
+        cl.style.display = "none";
+    }
+}
 
 // Nav effect
 window.onscroll = function () { scrollFunction() };
@@ -14,8 +46,7 @@ function scrollFunction() {
             document.querySelector(".navbar").style.backgroundColor = "transparent";
         }
     }
-    else
-    {
+    else {
         if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
             document.querySelector(".navbar").style.backgroundColor = "#121013";
         } else {
@@ -28,12 +59,12 @@ function scrollFunction() {
 var modal = document.getElementById('modal');
 
 var modalClose = document.getElementById('modal-close');
-modalClose.addEventListener('click', function() { 
-  modal.style.display = "none";
+modalClose.addEventListener('click', function () {
+    modal.style.display = "none";
 });
 
 // global handler
-document.addEventListener('click', function (e) { 
+document.addEventListener('click', function (e) {
     if (e.target.className.indexOf('modal-target') !== -1) {
         var img = e.target;
         var modalImg = document.getElementById("modal-content");
@@ -46,10 +77,10 @@ document.addEventListener('click', function (e) {
 
 // darkmode
 var app = document.getElementsByTagName("BODY")[0];
-    if (localStorage.lightMode == "dark") {
-        app.setAttribute("light-mode", "dark");
+if (localStorage.lightMode == "dark") {
+    app.setAttribute("light-mode", "dark");
 }
-    
+
 function toggle_light_mode() {
     var app = document.getElementsByTagName("BODY")[0];
     if (localStorage.lightMode == "dark") {
@@ -94,24 +125,23 @@ window.addEventListener(
 );
 
 // loadmore
-$(document).ready(function(){
+$(document).ready(function () {
     $(".all-clients-item").slice(0, 12).show();
-    $("#loadMore").on("click", function(e){
+    $("#loadMore").on("click", function (e) {
         e.preventDefault();
         $(".all-clients-item:hidden").slice(0, 12).slideDown();
-        if($(".all-clients-item:hidden").length == 0) {
+        if ($(".all-clients-item:hidden").length == 0) {
             $("#loadMore").text("No Content").addClass("noContent");
         }
     });
 })
 
 // loader
-
 document.onreadystatechange = function () {
     var state = document.readyState
     if (state == 'complete') {
         setTimeout(function () {
-            jQuery(document).ready(function() {
+            jQuery(document).ready(function () {
                 jQuery('#loader').fadeOut(500);
                 jQuery("#mybody").fadeIn(500);
             });
@@ -119,18 +149,17 @@ document.onreadystatechange = function () {
         }, 1500);
         // for wip modal show
         setTimeout(function () {
-            jQuery(document).ready(function() {
+            jQuery(document).ready(function () {
                 jQuery(".modal-wip").fadeIn(500);
             });
         }, 5000);
     }
-    else
-    {
+    else {
         document.getElementById("mybody").style.overflowY = "hidden";
     }
 }
 
 document.getElementById("exit-btn").addEventListener("click", HideWipModal);
-function HideWipModal(){
+function HideWipModal() {
     jQuery(".modal-wip").fadeOut(500);
 }
