@@ -1311,6 +1311,18 @@ body[light-mode="dark"] #bar3
   text-align: center;
   border-radius: 20px 0 30px 30px;
 }
+
+.bg-icon
+{
+  font-size: 250px;
+  position: absolute;
+  right: 10px;
+  bottom: -25px;
+  color: #495664;
+  opacity: 25%;
+  z-index: -1;
+}
+
 .vertical-text {
   writing-mode:vertical-rl;
   text-orientation: upright;
