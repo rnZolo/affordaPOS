@@ -1194,15 +1194,14 @@ body[light-mode="dark"] #bar3
   width: 230px;
   height: 230px;
   border-radius: 20px;
-  background-size: cover;
   transition: 0.5s;
   cursor: pointer;
+  object-fit: cover;
 }
 
 .clients-item:hover
 {
   filter: brightness(60%);
-  background-size: calc(150%);
 }
 
 @media only screen and (max-width: 720px)
@@ -1295,4 +1294,86 @@ body[light-mode="dark"] #bar3
 }
 .features-item .header i {
   font-size: 2rem;
+}
+
+/* ALL CLIENTS */
+.all-clients
+{
+  width: 100%;
+  height: fit-content;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.all-clients-item:hover
+{
+  filter: brightness(60%);
+}
+
+
+.all-clients-item
+{
+  width: 230px;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 20px;
+  cursor: pointer;
+  display: none;
+}
+
+.all-clients-child
+{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 100px;
+  padding-bottom: 50px;
+  gap: 30px;
+  justify-content: center;
+}
+
+.loadmore
+{
+  padding-bottom: 100px;
+}
+
+.all-clients button {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #FDB827;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.all-clients button>svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+}
+
+.all-clients button:hover svg {
+  transform: translateX(5px);
+}
+
+.all-clients button:active {
+  transform: scale(0.95);
+}
+
+@media only screen and (max-width: 720px)
+{
+  .all-clients-child
+  {
+    width: 90%;
+  }
 }

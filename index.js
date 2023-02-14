@@ -92,3 +92,15 @@ window.addEventListener(
     },
     false
 );
+
+// loadmore
+$(document).ready(function(){
+    $(".all-clients-item").slice(0, 12).show();
+    $("#loadMore").on("click", function(e){
+        e.preventDefault();
+        $(".all-clients-item:hidden").slice(0, 12).slideDown();
+        if($(".all-clients-item:hidden").length == 0) {
+            $("#loadMore").text("No Content").addClass("noContent");
+        }
+    });
+})
