@@ -578,7 +578,7 @@ input {
 .modal-content {
   margin: auto;
   display: block;
-  width: 50%;
+  width: 80%;
   opacity: 1 !important;
   max-width: 1200px;
 }
@@ -627,7 +627,7 @@ input {
 
 /* The Close Button */
 .modal-close {
-  position: absolute;
+  position: fixed;
   top: 15px;
   right: 35px;
   color: #f1f1f1;
@@ -643,7 +643,7 @@ input {
   cursor: pointer;
 }
 
-@media only screen and (max-width: 900px)
+@media only screen and (max-width: 720px)
 {
   .modal-content
   {
