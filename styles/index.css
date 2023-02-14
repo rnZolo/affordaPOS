@@ -1193,8 +1193,16 @@ body[light-mode="dark"] #bar3
 {
   width: 230px;
   height: 230px;
-  border: 1px solid #121013;
   border-radius: 20px;
+  background-size: cover;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.clients-item:hover
+{
+  filter: brightness(60%);
+  background-size: calc(150%);
 }
 
 @media only screen and (max-width: 720px)
