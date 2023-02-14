@@ -1335,11 +1335,6 @@ body[light-mode="dark"] #bar3
   justify-content: center;
 }
 
-.loadmore
-{
-  padding-bottom: 120px;
-}
-
 .all-clients button {
   cursor: pointer;
   font-weight: 700;
@@ -1352,7 +1347,7 @@ body[light-mode="dark"] #bar3
   align-items: center;
   font-size: 15px;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 70px;
   width: fit-content;
 }
 
