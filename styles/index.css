@@ -890,30 +890,6 @@ textarea {
   margin-bottom: 40px;
 }
 
-button[type="submit"] {
-  display: inline-block;
-  font-size: 16px;
-  text-transform: uppercase;
-  background: transparent;
-  border: 2px solid;
-  font-weight: 500;
-  padding: 10px 20px;
-  outline: 0;
-  cursor: pointer;
-  color: #103e65;
-  transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -webkit-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -moz-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -ms-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  -o-transition: all 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19);
-}
-
-/* button[type="submit"]:hover {
-  background-color: #f85508;
-  border-color: #f85508;
-  color: #fff;
-} */
-
 .get_say_form {
   display: inline-block;
   padding: 20px;
@@ -976,34 +952,32 @@ ul {
   background-color: #f85508;
 } */
 
-.contact-info button {
+.contact-us button {
   cursor: pointer;
-  font-weight: 700;
   transition: all .2s;
   padding: 10px 20px;
   border-radius: 100px;
   background: #21209C;
+  color: #F1F1F1;
   border: 1px solid transparent;
   display: flex;
   align-items: center;
   font-size: 15px;
-  color: #F1F1F1;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-/* .contact-info button:hover {
-  background: #FDB827;
-} */
-
-.contact-info button>i {
-  width: 35px;
+.contact-us button>i {
+  width: 34px;
+  margin-left: 10px;
   transition: transform .3s ease-in-out;
 }
 
-.contact-info button:hover i {
+.contact-us button:hover i {
   transform: translateX(5px);
 }
 
-.contact-info button:active {
+.contact-us button:active {
   transform: scale(0.95);
 }
 
@@ -1094,7 +1068,6 @@ body[light-mode="dark"] .contact-us p,
 body[light-mode="dark"] .contact-us h1, 
 body[light-mode="dark"] .contact-us h3, 
 body[light-mode="dark"] .about h1,
-body[light-mode="dark"] .clients h1,
 body[light-mode="dark"] .feature h1
 {
   color: #F1F1F1;
@@ -1130,12 +1103,18 @@ body[light-mode="dark"] #bar3
 .clients
 {
   width: 100%;
-  height: 500px;
+  height: fit-content;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   margin-top: 30px;
   position: relative;
   overflow: hidden;
+  background-color: #FDB827;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  border-radius: 0 100px 0 100px;
+  gap: 20px;
 }
 
 .clients .heading-text
@@ -1151,7 +1130,92 @@ body[light-mode="dark"] #bar3
   margin-bottom: 20px;
 }
 
+.clients-info
+{
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
 
+.clients-img
+{
+  gap: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.message-clients
+{
+  width: 40%;
+  text-align: justify;
+}
+
+.clients button {
+  cursor: pointer;
+  font-weight: 700;
+  transition: all .2s;
+  padding: 10px 20px;
+  border-radius: 100px;
+  background: #F1F1F1;
+  border: 1px solid transparent;
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: fit-content;
+}
+
+.clients button>svg {
+  width: 34px;
+  margin-left: 10px;
+  transition: transform .3s ease-in-out;
+}
+
+.clients button:hover svg {
+  transform: translateX(5px);
+}
+
+.clients button:active {
+  transform: scale(0.95);
+}
+
+.clients-left
+{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.clients-item
+{
+  width: 230px;
+  height: 230px;
+  border: 1px solid #121013;
+  border-radius: 20px;
+}
+
+@media only screen and (max-width: 720px)
+{
+  .clients .heading-text, .clients-info
+  {
+    width: 90%;
+  }
+  .clients-info
+  {
+    flex-direction: column;
+  }
+  .clients-left, .message-clients
+  {
+    width: 100%;
+  }
+  .clients-img
+  {
+    margin-bottom: 30px;
+  }
+}
 /* FEATURES */
 .feature
 {
