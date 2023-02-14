@@ -578,7 +578,7 @@ input {
 .modal-content {
   margin: auto;
   display: block;
-  width: 80%;
+  width: 50%;
   opacity: 1 !important;
   max-width: 1200px;
 }
@@ -641,6 +641,14 @@ input {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+@media only screen and (max-width: 900px)
+{
+  .modal-content
+  {
+    width: 90%;
+  }
 }
 
 /* MEET THE TEAM */
