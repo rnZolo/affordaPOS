@@ -6,6 +6,41 @@ $('.menu-toggle').click(function () {
     cl.style.display = "none";
 });
 
+// features
+const option1 = document.querySelector('input[value="resto"]');
+const option2 = document.querySelector('input[value="retail"]');
+const restoFt = document.getElementById('restoFt');
+const retailFt = document.getElementById('retailFt');
+const retailspan = document.getElementById('retailFtBtn')
+const restospan = document.getElementById('restoFtBtn')
+
+function hideResto() {
+    restoFt.style.display = "none";
+}
+function hideRet() {
+    retailFt.style.display = "none";
+}
+function activeresto() {
+    restospan.classList.add('active-ft')
+    retailspan.classList.remove('active-ft')
+}
+function activeret() {
+    retailspan.classList.add('active-ft')
+    restospan.classList.remove('active-ft')
+}
+option1.addEventListener('click', function () {
+    restoFt.style.display = "block";
+    hideRet()
+    activeresto()
+  });
+  
+  option2.addEventListener('click', function() {
+    retailFt.style.display = "block";
+    hideResto()
+    activeret()
+  });
+
+
 // drop-down features
 document.querySelector("#f").addEventListener("click", Features);
 var f = document.querySelector(".drop-down-features");
