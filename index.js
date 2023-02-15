@@ -46,14 +46,21 @@ document.querySelector("#f").addEventListener("click", Features);
 var f = document.querySelector(".drop-down-features");
 function Features() {
     if (f.style.display === "none")
-    {
-        f.style.display = "block";
-        cl.style.display = "none";
-    }
+        {
+            f.style.display = "block";
+            cl.style.display = "none";
+        }
     else
-    {
-        f.style.display = "none";
-    }
+        {
+            f.style.display = "none";
+        }
+}
+
+window.addEventListener("resize", Resize)
+function Resize()
+{
+    cl.style.display = "none";
+    f.style.display = "none";
 }
 
 // drop-down clients
@@ -61,19 +68,22 @@ document.querySelector("#cl").addEventListener("click", Clients);
 var cl = document.querySelector(".drop-down-clients");
 function Clients() {
     if (cl.style.display === "none")
-    {
-        cl.style.display = "block";
-        f.style.display = "none";
-    }
+        {
+            cl.style.display = "block";
+            f.style.display = "none";
+        }
     else
-    {
-        cl.style.display = "none";
-    }
+        {
+            cl.style.display = "none";
+        }
 }
+
 
 // Nav effect
 window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
+    cl.style.display = "none";
+    f.style.display = "none";
     if (localStorage.lightMode == "light") {
         if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
             document.querySelector(".navbar").style.backgroundColor = "#F1F1F1";

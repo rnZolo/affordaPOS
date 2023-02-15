@@ -70,11 +70,6 @@ body {
   text-align: center;
 }
 
-.nav-item
-{
-    width: 100px;
-}
-
 .nav-item a {
   color: #121013;
   font-size: 15px;
@@ -1333,7 +1328,7 @@ body[light-mode="dark"] #bar3
   display: flex;
   flex-direction: column;
   top: 60px;
-  right: 290px;
+  right: 253px;
   position: absolute;
   background-color: #f1f1f1;
   padding: 30px;
@@ -1440,8 +1435,9 @@ body[light-mode="dark"] .list-features
 {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   top: 60px;
-  right: 190px;
+  right: 153px;
   position: absolute;
   background-color: #f1f1f1;
   padding: 30px;
