@@ -117,20 +117,6 @@ window.onscroll = function () { scrollFunction() };
 function scrollFunction() {
     cl.style.display = "none";
     f.style.display = "none";
-    if (localStorage.lightMode == "light") {
-        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-            document.querySelector(".navbar").style.backgroundColor = "#F1F1F1";
-        } else {
-            document.querySelector(".navbar").style.backgroundColor = "transparent";
-        }
-    }
-    else {
-        if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
-            document.querySelector(".navbar").style.backgroundColor = "#121013";
-        } else {
-            document.querySelector(".navbar").style.backgroundColor = "transparent";
-        }
-    }
 }
 
 // Modal Setup
