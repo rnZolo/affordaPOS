@@ -4,6 +4,8 @@ $('.menu-toggle').click(function () {
     $(this).toggleClass("is-active");
     f.style.display = "none";
     cl.style.display = "none";
+    e.style.display = "none";
+    clm.style.display = "none";
 });
 
 // features
@@ -43,39 +45,70 @@ option1.addEventListener('click', function () {
 
 // drop-down features
 document.querySelector("#f").addEventListener("click", Features);
-var f = document.querySelector(".drop-down-features");
+var f = document.querySelector(".drop-down-features");// dropdown in large
+var e = document.querySelector(".drop-down-features-mobile"); //dropdown in small
+
 function Features() {
-    if (f.style.display === "none")
+    if (window.innerWidth <= 720){ // if window is small
+        if (e.style.display === "none")// if small-ftdropdown is not visible 
         {
-            f.style.display = "block";
-            cl.style.display = "none";
+            e.style.display = "block"; //set smallscreen-FTdropdown to become visible
+            cl.style.display = "none"; //set largesreen-Cldropdown to no visible
         }
-    else
+        else// if small-Ftdropdown is visible
+            {
+            e.style.display = "none"; //set small-Ftdropdown to not visible
+        }
+    }else{ // if window id large
+        if (f.style.display === "none")//if large-ftdropdown is not visible
         {
-            f.style.display = "none";
+            f.style.display = "block"; //set large-ftdropdown to visible
+            cl.style.display = "none"; // set large-Cldropdown to not visible
         }
+    else //if large-ftdropdown is visible
+        {
+            f.style.display = "none"; // set large-Ftdropdown to not visible
+        }
+    }
 }
+
 
 window.addEventListener("resize", Resize)
 function Resize()
 {
     cl.style.display = "none";
     f.style.display = "none";
+    e.style.display = "none";
+    clm.style.display = "none";
 }
 
 // drop-down clients
 document.querySelector("#cl").addEventListener("click", Clients);
 var cl = document.querySelector(".drop-down-clients");
+var clm = document.querySelector(".drop-down-clients-mobile");
+
 function Clients() {
-    if (cl.style.display === "none")
+    if (window.innerWidth <= 720){ // if window is small
+        if (clm.style.display === "none")// if small-CLdropdown is not visible 
         {
-            cl.style.display = "block";
-            f.style.display = "none";
+            clm.style.display = "block"; //set smallscreen-FTdropdown to become visible
+            f.style.display = "none"; //set largesreen-Cldropdown to no visible
         }
-    else
+        else// if small-Ftdropdown is visible
+            {
+                clm.style.display = "none"; //set large-cldropdown to not visible
+        }
+    }else{ // if window id large
+        if (cl.style.display === "none")//if large-cldropdown is not visible
         {
-            cl.style.display = "none";
+            cl.style.display = "block"; //set large-cldropdown to visible
+            f.style.display = "none"; // set small-ftdropdown to not visible
         }
+    else //if large-ftdropdown is visible
+        {
+            cl.style.display = "none"; // set large-cldropdown to not visible
+        }
+    }
 }
 
 

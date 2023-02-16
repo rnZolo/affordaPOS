@@ -78,11 +78,9 @@ body {
   transition: color 0.3s ease-out;
   cursor: pointer;
 }
-
 .nav-item a:hover {
   color: #3498db;
 }
-
 
 @keyframes underline {
   from {
@@ -276,8 +274,10 @@ input {
     height: calc(100vh);
     transform: translate(-101%);
     text-align: center;
-    overflow: hidden;
+    overflow-y: scroll;
     margin-right: 0;
+    padding-top: 50px;
+    z-index: -1;
   }
 
   .nav-item a
@@ -287,10 +287,6 @@ input {
 
   .navbar li {
     padding: 15px;
-  }
-
-  .navbar li:first-child {
-    margin-top: 50px;
   }
 
   .navbar li a {
@@ -409,7 +405,7 @@ input {
 }
 
 .services-text img {
-  width: 70%;
+  width: 100%;
   border-radius: 20px;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -519,7 +515,7 @@ input {
   width: 250px;
   filter: grayscale(70%);
   transition: 0.3s;
-  border-radius: 20px;
+  border-radius: 5px;
 }
 
 .packages-info img:hover {
@@ -538,7 +534,6 @@ input {
 /* MODAL IMAGE */
 .modal-target {
   width: 300px;
-  border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
@@ -1137,7 +1132,7 @@ body[light-mode="dark"] #bar3
 
 .message-clients
 {
-  width: 40%;
+  width: 50%;
   text-align: justify;
   z-index: 2;
 }
@@ -1176,7 +1171,7 @@ body[light-mode="dark"] #bar3
 {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 50%;
   z-index: 2;
 }
 
@@ -1184,7 +1179,6 @@ body[light-mode="dark"] #bar3
 {
   width: 230px;
   height: 230px;
-  border-radius: 20px;
   transition: 0.5s;
   cursor: pointer;
   object-fit: cover;
@@ -1251,7 +1245,6 @@ body[light-mode="dark"] #bar3
   align-items: center;
   gap: 2rem;
 }
-
 .features-item
 {
   width: 300px;
@@ -1260,7 +1253,7 @@ body[light-mode="dark"] #bar3
   display: flex;
   gap: 1rem;
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 20px 20px 20px 0;
 }
 .features-item:nth-child(5) .list-features{
   font-size: 13px;
@@ -1337,6 +1330,15 @@ body[light-mode="dark"] #bar3
   border-radius: 20px;
   align-items: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  
+  a {
+      text-decoration: none;
+      color: black;
+  }
+  a:hover
+  {
+    color: #3498db;
+  }
 }
 
 body[light-mode="dark"] .list-features
@@ -1344,18 +1346,71 @@ body[light-mode="dark"] .list-features
   color: #f1f1f1;
 }
 
+.drop-down-features-mobile{
+  display: none;
+}
+.drop-down-clients-mobile{
+  display: none;
+}
 @media only screen and (max-width: 720px)
 {
-  .dropdown-content-features
-  {
-    right: 10px;
-    top: 310px;
+  // .row-feature{
+  //   width: 100%;
+  //   display: flex;
+  //   flex-flow: row nowrap;
+  //   overflow: hidden;
+  // }
+
+  .drop-down-features{
+   display: none;
+   &-mobile{
+    &  .dropdown-content-features-mobile{
+      display: flex;
+      flex-flow: column wrap ;
+      background-color: #a88434;
+      & a{
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 15px;
+      }
+    }
+   }
+  }
+  .dropdown-content-features-mobile{
+    display: flex;
+    flex-flow: column wrap ;
   }
 
-  .feature .heading-text, .feature .features-info, .feature .features-radio
-  {
-    width: 90%;
+  .drop-down-clients{
+    display: none;
+    &-mobile{
+     &  .dropdown-content-clients-mobile{
+       display: flex;
+       flex-flow: column wrap ;
+       background-color: #a88434;
+       & a{
+         text-decoration: none;
+         color: black;
+         display: block;
+         padding: 15px;
+       }
+     }
+    }
+   }
+   .dropdown-content-clients-mobile{
+    display: flex;
+    flex-flow: column wrap ;
   }
+  // .dropdown-content-features
+  // {
+  //   right: 10px;
+  //   top: 310px;
+  // }
+  // .feature .heading-text, .feature .features-info, .feature .features-radio
+  // {
+  //   width: 90%;
+  // }
 }
 
 /* ALL CLIENTS */
@@ -1433,19 +1488,27 @@ body[light-mode="dark"] .list-features
 
 .dropdown-content-clients
 {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
   top: 60px;
-  right: 153px;
+  right: 10px;
   position: absolute;
   background-color: #f1f1f1;
   padding: 30px;
-  width: 200px;
+  width: 700px;
   gap: 20px;
   border-radius: 20px;
-  align-items: center;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  a
+  {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:hover
+  {
+    color: #3498db;
+  }
 }
 
 @media only screen and (max-width: 720px)
@@ -1672,7 +1735,7 @@ input[type="radio"] {
   justify-content: center;
   align-items: center;
   text-align: center;
-  border-radius: 20px;
+  border-radius: 10px;
 
 /* Style the custom radio button when it's selected */
 /* Style the label for the radio button */
@@ -1721,3 +1784,4 @@ input[type="radio"] {
     flex-direction: column;
   }
 }
+
