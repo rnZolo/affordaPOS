@@ -156,7 +156,7 @@ if (localStorage.lightMode == "dark") {
     app.setAttribute("light-mode", "dark");
 }
 
-function toggle_light_mode() {
+function toggle_light_mode() {//navbar mode
     var app = document.getElementsByTagName("BODY")[0];
     if (localStorage.lightMode == "dark") {
         localStorage.lightMode = "light";
