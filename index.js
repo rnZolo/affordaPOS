@@ -111,9 +111,20 @@ function Clients() {
     }
 }
 
+cl.addEventListener("click", ClientClose); //after select from the clients list the dropdown clients on large screen will automatically close
+function ClientClose()
+{
+    cl.style.display = "none";
+}
+
+f.addEventListener("click", FeaturesClose); //after select from the features list the dropdown features on large screen will automatically close
+function FeaturesClose()
+{
+    f.style.display = "none";
+}
 
 // Nav effect
-window.onscroll = function () { scrollFunction() };
+window.onscroll = function () { scrollFunction() };// scroll will close the active drop down
 function scrollFunction() {
     cl.style.display = "none";
     f.style.display = "none";
