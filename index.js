@@ -1,12 +1,21 @@
 // responsive nav bar
-$('.menu-toggle').click(function () {
+document.querySelector(".menu-toggle").addEventListener("click", ToggleNav)
+function ToggleNav()
+{
     $(".nav").toggleClass("mobile-nav");
     $(this).toggleClass("is-active");
     f.style.display = "none";
     cl.style.display = "none";
     e.style.display = "none";
     clm.style.display = "none";
-});
+}
+
+//close mobile nav after selecting
+document.querySelector(".drop-down-clients-mobile").addEventListener("click", closeNav)
+function closeNav()
+{
+    location.href = './allclients.html';
+}
 
 // features
 const option1 = document.querySelector('input[value="resto"]');
@@ -34,13 +43,13 @@ option1.addEventListener('click', function () {
     restoFt.style.display = "block";
     hideRet()
     activeresto()
-  });
-  
-  option2.addEventListener('click', function() {
+});
+
+option2.addEventListener('click', function() {
     retailFt.style.display = "block";
     hideResto()
     activeret()
-  });
+});
 
 
 // drop-down features
@@ -95,8 +104,8 @@ function Clients() {
             f.style.display = "none"; //set largesreen-Cldropdown to no visible
         }
         else// if small-Ftdropdown is visible
-            {
-                clm.style.display = "none"; //set large-cldropdown to not visible
+        {
+            clm.style.display = "none"; //set large-cldropdown to not visible
         }
     }else{ // if window id large
         if (cl.style.display === "none")//if large-cldropdown is not visible
@@ -221,20 +230,21 @@ document.onreadystatechange = function () {
                 jQuery("#mybody").fadeIn(500);
             });
             document.getElementById("mybody").style.overflowY = "scroll";
-        }, 1500);
+        },1000);
         // for wip modal show
-        setTimeout(function () {
-            jQuery(document).ready(function () {
-                jQuery(".modal-wip").fadeIn(500);
-            });
-        }, 5000);
+        // setTimeout(function () {
+        //     jQuery(document).ready(function () {
+        //         jQuery(".modal-wip").fadeIn(500);
+        //     });
+        // }, 5000);
     }
     else {
         document.getElementById("mybody").style.overflowY = "hidden";
     }
 }
 
-document.getElementById("exit-btn").addEventListener("click", HideWipModal);
-function HideWipModal() {
-    jQuery(".modal-wip").fadeOut(500);
-}
+// document.getElementById("exit-btn").addEventListener("click", HideWipModal);
+// function HideWipModal() {
+//     jQuery(".modal-wip").fadeOut(500);
+// }
+
