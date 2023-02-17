@@ -1,5 +1,23 @@
+// responsive nav bar
+document.querySelector(".menu-toggle").addEventListener("click", ToggleNav)
+function ToggleNav()
+{
+    $(".nav").toggleClass("mobile-nav");
+    $(this).toggleClass("is-active");
+    f.style.display = "none";
+    cl.style.display = "none";
+    e.style.display = "none";
+    clm.style.display = "none";
+}
 
-        var itemHolder = document.querySelector(".all-clients-child");
+//close mobile nav after selecting
+document.querySelector(".drop-down-clients-mobile").addEventListener("click", closeNav)
+function closeNav()
+{
+    location.href = './allclients.html';
+}
+
+var itemHolder = document.querySelector(".all-clients-child");
         var CategoryCl = document.querySelector(".clients-category");
         
         // harware-items
