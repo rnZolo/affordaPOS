@@ -10,13 +10,6 @@ function ToggleNav()
     clm.style.display = "none";
 }
 
-//close mobile nav after selecting
-document.querySelector(".drop-down-clients-mobile").addEventListener("click", closeNav)
-function closeNav()
-{
-    location.href = './allclients.html';
-}
-
 // features
 const option1 = document.querySelector('input[value="resto"]');
 const option2 = document.querySelector('input[value="retail"]');
