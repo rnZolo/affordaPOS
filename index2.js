@@ -34,7 +34,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -61,7 +61,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -90,7 +90,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -115,7 +115,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -149,7 +149,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -200,7 +200,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -244,7 +244,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -269,7 +269,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -300,7 +300,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -331,7 +331,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -358,7 +358,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -383,7 +383,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -411,7 +411,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0,6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -439,7 +439,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -464,7 +464,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -490,7 +490,7 @@ var itemHolder = document.querySelector(".all-clients-child");
                 "</svg>";
                 $("#loadMore").on("click", function (e) {
                     e.preventDefault();
-                    $(".all-clients-item:hidden").slice(0, 12).slideDown();
+                    $(".all-clients-item:hidden").slice(0, 6).slideDown();
                     if ($(".all-clients-item:hidden").length == 0) {
                         $("#loadMore").text("No Content").addClass("noContent");
                     }
@@ -547,16 +547,16 @@ var itemHolder = document.querySelector(".all-clients-child");
 
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         // loadmore
-        $(document).ready(function () {
-            $(".all-clients-item").slice(0, 12).show();
-            $("#loadMore").on("click", function (e) {
-                e.preventDefault();
-                $(".all-clients-item:hidden").slice(0, 12).slideDown();
-                if ($(".all-clients-item:hidden").length == 0) {
-                    $("#loadMore").text("No Content").addClass("noContent");
-                }
-            });
-        })
+        // $(document).ready(function () {
+        //     $(".all-clients-item").slice(0, 12).show();
+        //     $("#loadMore").on("click", function (e) {
+        //         e.preventDefault();
+        //         $(".all-clients-item:hidden").slice(0, 0).slideDown();
+        //         if ($(".all-clients-item:hidden").length == 0) {
+        //             $("#loadMore").text("No Content").addClass("noContent");
+        //         }
+        //     });
+        // })
 
             // drop-down features
             document.querySelector("#f").addEventListener("click", Features);
