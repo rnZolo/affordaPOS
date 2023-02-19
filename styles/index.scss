@@ -392,8 +392,32 @@ input {
 
 .services-text {
   width: 50%;
+  h3
+  {
+    font-size: 2.5vw;
+    font-family: 'Archivo Black', sans-serif;
+  }
+  h4
+  {
+    font-size: 2.3vw;
+    font-family: 'Archivo Black', sans-serif;
+    color: #FDB827;
+  }
 }
 
+@media only screen and (max-width: 720px)
+  {
+    .services-text h3
+    {
+      font-size: 25px;
+      font-family: 'Archivo Black', sans-serif;
+    }
+    .services-text h4
+    {
+      font-size: 20px;
+      font-family: 'Archivo Black', sans-serif;
+    }
+}
 .services-img {
   width: 50%;
   display: flex;
@@ -401,8 +425,9 @@ input {
 }
 
 .services-img img {
-  width: 100%;
+  width: 115%;
 }
+
 
 .services-text img {
   width: 100%;
