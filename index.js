@@ -449,25 +449,25 @@
         // }
 
     //MESSENGER PLUGIN
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "106087010816930");
-    chatbox.setAttribute("attribution", "biz_inbox");
-    
-    // Your SDK code 
-    window.fbAsyncInit = function () {
-        FB.init({
-            xfbml: true,
-            version: 'v16.0'
-        });
-    };
+        var chatbox = document.getElementById('fb-customer-chat');
+        chatbox.setAttribute("page_id", "342464657012399");
+        chatbox.setAttribute("attribution", "biz_inbox");
+        
+        // Your SDK code 
+        window.fbAsyncInit = function() {
+            FB.init({
+                xfbml            : true,
+                version          : 'v16.0'
+            });
+        };
 
-    (function (d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
     //MESSENGER PLUG IN END
     
     //SCROLL BAR PROGRESS
@@ -478,44 +478,6 @@
     document.getElementById("progressBar").style.width = scrolled + "%";
 }
     
-// POS-Android-window-Base
-
-    const posAndroidBtns = document.querySelector('.android-based .header-wrapper')
-    const posWindowBtns = document.querySelector('.window-based .header-wrapper')
-    
-    const androidCont = document.querySelector('.android')
-    const windowCont = document.querySelector('.window')
-    const andHide = document.querySelector('.android-based')
-    const winHide = document.querySelector('.window-based')
-    const androidFeatures = document.querySelector('.android-based-accordion')
-    const windowFeatures = document.querySelector('.window-based-accordion')
-
-    posAndroidBtns.addEventListener('click', function () {
-        accord(androidCont, androidFeatures, winHide)
-    })
-    posWindowBtns.addEventListener('click', function () {
-        accord(windowCont, windowFeatures, andHide)
-    })
-    
-
-    function accord(div, accordItem , hide) {
-        if (div.classList.contains('full-cover') == true){
-            div.classList.replace( 'full-cover', 'normal') // remove cover size
-            accordItem.style.display = 'none'
-            hide.style.display = 'flex'
-        }else{
-            div.classList.replace('normal','full-cover') // add cover size
-            accordItem.style.display = 'block'
-            hide.style.display = 'none'
-        }
-        setTimeout(function(){
-            div.classList.replace( 'full-cover', 'normal') // remove cover size
-            accordItem.style.display = 'none'
-            hide.style.display = 'flex'
-        },10000)
-}
-
-
 // RESTO MOBILE   
 const RestoRemotechevron = document.querySelector(".resto-remote-icon");
 const RestoInterfacechevron = document.querySelector(".resto-interface-icon");
@@ -641,3 +603,63 @@ function Retailbarcode()
     $(".retail-content-barcode p").slideToggle("fast");
     Retailbarcodechevron.classList.toggle("icon-rotate");
 }
+
+ // POS-Android-window-Base
+//btns
+const posBtns = document.querySelectorAll('.pos-heading')
+const navPosBtns = document.querySelectorAll('.BasedBTN')
+const navPosBtnsMob = document.querySelectorAll('.BasedBTNMob')
+
+// target elements
+const androidBased = document.querySelector('.android-based')
+const windowBased = document.querySelector('.window-based')
+windowBased.style.display = 'none'
+
+function posbased(nd, grp, t1, t2){
+    for( nd of grp){
+        nd.addEventListener('click',function(){
+            console.log(nd)
+        if (this !== grp[0]){ 
+            t2.style.display = 'block'
+            t1.style.display = 'none'
+           
+            if( grp === posBtns){
+                this.style.width = '300px'
+                grp[0].style.width     = '250px'
+            }
+        }else{
+            t1.style.display = 'block'
+            t2.style.display = 'none'
+
+            if(grp === posBtns){
+                this.style.width = '300px'
+                grp[1].style.width = '250px'            
+            }
+        }
+        })
+    }
+
+}
+let posBtn, navPosBtn, navPosBtnMob
+posbased(  posBtn, posBtns, androidBased, windowBased)
+posbased( navPosBtn, navPosBtns, androidBased, windowBased)
+posbased( navPosBtnMob, navPosBtnsMob, androidBased, windowBased)
+
+// for(const posBtn of posBtns){
+//     posBtn.addEventListener('click',function(){
+//     if (this !== posBtns[0]){ 
+//         windowBased.style.display = 'block'
+//         androidBased.style.display = 'none'
+//         this.style.width = '300px'
+//         posBtns[0].style.width = '250px'
+//     }else{
+//         androidBased.style.display = 'block'
+//         windowBased.style.display = 'none'
+//         this.style.width = '300px'
+//         posBtns[1].style.width = '250px'
+//     }
+//     })
+// }
+
+
+
