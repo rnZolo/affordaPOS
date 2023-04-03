@@ -663,3 +663,59 @@ posbased( navPosBtnMob, navPosBtnsMob, androidBased, windowBased)
 
 
 
+const itemDashB = document.querySelector('.item-dashb'),
+itemSM = document.querySelector('.item-SM'),
+itemSRM= document.querySelector('.item-SRM'),
+itemIM= document.querySelector('.item-IM'),
+itemPM= document.querySelector('.item-PM'),
+itemCM= document.querySelector('.item-CM'),
+itemSS= document.querySelector('.item-SS'),
+itemCrt= document.querySelector('.item-Crt'),
+itemOf= document.querySelector('.item-Of')
+
+let dashB = {title: 'Dashboard',
+list:[ " Data summary "]},
+sm = {title: 'Sales Management',
+list:["Sales Transaction/Cashiering", "Starting Cash" ," Cash Drop" ," Cash Count" , "Cash Counter" , "Sales Quotation" , "Credits/Pay Later" , "Secondary Display/Customer Display" ," Discounts" ," Hold Transaction" , "Customer/Membership" , "Price Check" , "Order Print" , "Senior Citizen/PWD Discount" ," Custom discount (Amount or Percent)" , "Void transaction with password (Item and Discount)" , "Change Selling Price" ," Barcode / Search Item Name", " Cash, Credit Card, and other MOP available"]}, 
+srm = {title: 'Sales Report Management',
+list:[ "Pending Quotaion List", "Receipt/Invoice List (Can be filter by Cashier, MOP and by date range)", "Export Sales", "Cancel Sales/Transaction", "Credit Status", "Store Report"," Staff Report", "Store Calendar Report"," Members Report", "Item Sales"," Discount Report", "Credit Report", "Category Sales", "Stock Card (History trail)", "Stock/Pull Out", "Out of Stock Items Report", "Best Seller Items", "Item Expiry Report", "Expiration notification"," Item Return Report", "Expenses Report", "Cash Logs", "Mode of Payment Breakdown Report", "Top-up Reports", "Supplier PO Item Report"],},
+im = {title: 'Inventory Management',
+list:["Item Masterlist", "Item Category", "Stock In", "Stock Out", "Warehouse Inventory", "Stock Transfer (Warehouse to Store stock transfer)", "Price Adjustment", "Purchase Order"," Receiving Order", "Supplier"],},
+pm = {title: 'Parameters Management',
+list:[" Create Unit of Measure", "Create Mode of Payment", "Credit Terms", "Expense"]}, 
+cm = {title: 'Customers Management',
+list:[ "Membership", "Member/Customer", "Vouchers", "Discounts"]},
+ss = {title: 'System Setting',
+list:[ "User Access ", "Backup/Restore Database"," Stock warehouse" , "System Config"," Receipt Config", "Archive"]}
+Crtf = {title: 'Cart',
+list:[ "product Navigation", " transaction computation", " credit, cash drops, cash count and close counter", " secondary monitor display (for customer)", " database"],},
+Of = {title: 'Other Feaures',
+list:[" Notifications", " Open Drawer", " Reprint Receipt", " Import and export CSV",  "Sending Reports to Email",  "Print Report via PDF"]}
+
+function createList(title, liList, cont){
+    let cosTit = document.createElement('h3')
+    cosTit.textContent = title
+    let cosUl = document.createElement('ul')
+    liList.forEach(item => {
+        let cosLi = document.createElement('li')
+        cosLi.textContent = item
+        cosUl.appendChild(cosLi)
+    });
+    cont.appendChild(cosTit)
+    cont.appendChild(cosUl)
+}
+
+createList(dashB.title, dashB.list, itemDashB)
+createList(sm.title, sm.list, itemSM)
+createList(srm.title, srm.list, itemSRM)
+createList(im.title, im.list, itemIM)
+createList(pm.title, pm.list, itemPM)
+createList(cm.title, cm.list, itemCM)
+createList(ss.title, ss.list, itemSS)
+createList(Crtf.title, Crtf.list, itemCrt)
+createList(Of.title, Of.list, itemOf)
+
+
+
+
+
