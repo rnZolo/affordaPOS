@@ -618,7 +618,6 @@ windowBased.style.display = 'none'
 function posbased(nd, grp, t1, t2){
     for( nd of grp){
         nd.addEventListener('click',function(){
-            console.log(nd)
         if (this !== grp[0]){ 
             t2.style.display = 'block'
             t1.style.display = 'none'
@@ -663,7 +662,9 @@ posbased( navPosBtnMob, navPosBtnsMob, androidBased, windowBased)
 
 
 
-const itemDashB = document.querySelector('.item-dashb'),
+const windowsItems = document.querySelectorAll('.windows-item'),
+windowsGrid = document.querySelector('.win-change'),
+itemDashB = document.querySelector('.item-dashb'),
 itemSM = document.querySelector('.item-SM'),
 itemSRM= document.querySelector('.item-SRM'),
 itemIM= document.querySelector('.item-IM'),
@@ -715,7 +716,81 @@ createList(ss.title, ss.list, itemSS)
 createList(Crtf.title, Crtf.list, itemCrt)
 createList(Of.title, Of.list, itemOf)
 
+const images = document.querySelectorAll('img'),
+ulChs = document.querySelectorAll('.windows-item ul')
+images.forEach((image) => {
+    image.setAttribute('draggable', false)
+})
 
+let viewPortWidth = window.innerWidth,
+happenOnce = false, // happened to be small?
+itHas = false //window-flex is applied?
+checkVP()
+window.addEventListener('resize', checkVP)
 
+function checkVP(){
+        viewPortWidth = window.innerWidth
+        if (viewPortWidth <= 450){
+            ulChs.forEach((ulsCh) => {
+                ulsCh.style.display = 'none'
+            })
+            happenOnce = true
+            asMediaQuery()
+        } 
+        if ( viewPortWidth > 450){
+            // apply reset
+            ulChs.forEach((ulsCh) => {
+                ulsCh.style.display = 'flex'
+            })
+            if(itHas){
+                windowsGrid.classList.replace('windows-flex', 'windows-grid',)
+                itHas = false
+                ulChs.forEach((ulsCh) => {
+                    ulsCh.style.height = '90%'
+                })
+                windowsItems.forEach((windowsItem) => {
+                    windowsItem.classList.remove('mobile-infopos')
+                    windowsItem.removeEventListener
+                })
+            }
+        }
+    }
 
+function asMediaQuery(){
+    if (happenOnce){ // smallscreen?
+    //if yes add classes for mobile styles else..
+    // window-grid to window-flex
+    windowsGrid.classList.replace('windows-grid', 'windows-flex')
+    itHas = true // flex is applied
 
+        // window-items accordion style
+    windowsItems.forEach((windowsItem) => {
+        windowsItem.classList.add('mobile-infopos');
+
+        // add click event listener to each window-item
+        windowsItem.addEventListener('click', function () {
+            const ulCh = this.querySelector('ul');
+            const isClicked = this.classList.contains('clicked');
+        
+            // close all other items
+            windowsItems.forEach((item) => {
+                if (item !== this) {
+                    item.classList.remove('clicked');
+                    item.querySelector('ul').style.display = 'none';
+                }
+            }); 
+
+            if (isClicked) {
+                // if this item is already clicked, close it
+                this.classList.remove('clicked');
+                ulCh.style.display = 'none';
+            } else {
+                // if this item is not clicked, open it
+                this.classList.add('clicked');
+                ulCh.style.display = 'flex';
+            }
+        });
+    });
+    applyMob = false
+}
+}
