@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- style -->
+    <link rel="stylesheet" href="../styles/index.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <script src="https://kit.fontawesome.com/910cc9fb7b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+    <!-- fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <!-- fonts end -->
+
+    <!-- aos animation effect -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="../resources/logo.png">
+    <title>AffordaPOS | All Clients</title>
+</head>
+
+<body id="mybody">
+    <div class="loader-container" id="loader">
+        <div class="spinner animate__bounceIn"></div>
+    </div>
+    <!-- nav bar -->
+    <div class="page-wrapper">
+        <div class="nav-wrapper">
+            <nav class="navbar" id="mynav">
+                <img src="../resources/logo.png" onclick="location.href='../index.html#services'" alt="Company Logo" id="nav-logo"
+                    class="nav-logo" />
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar" id="bar1"></span>
+                    <span class="bar" id="bar2"></span>
+                    <span class="bar" id="bar3"></span>
+                </div>
+                <ul class="nav no-search" id="nav">
+                    <span>
+                        <li class="nav-item"><a id="h" href="../index.html#services">Home</a></li>
+                    </span>
+                    <span>
+                        <li class="nav-item"><a id="p" href="../index.html#packages">Packages</a></li>
+                    </span>
+                    <span>
+                        <li class="nav-item"><a id="pro">Products</a></li>
+                    </span>
+                    <div class="drop-down-products-mobile animate__bounceIn">
+                        <p class="product1">Product1</p>
+                        <p class="product2">product2</p>
+                        <p class="product3">product3</p>
+                        <p class="product4">product4</p>
+                        <p class="product5">product5</p>
+                        <p class="product6">product6</p>
+                        <p class="product7">product7</p>
+                        <p class="product8">product8</p>
+                        <p class="product9">product9</p>
+                    </div>
+                    <span>
+                        <li class="nav-item"><a id="f"> POS Features</a></i></li>
+                    </span>
+                    <div class="drop-down-features-mobile">
+                        <div class="dropdown-content-features-mobile animate__bounceIn" id="myDropdown">
+                            <a href="#">Android Based</a>
+                            <a href="#">Window Based</a>
+                        </div>
+                    </div>
+                    <span>
+                        <li class="nav-item"><a id="cl">Clients </a></li>
+                    </span>
+                    <div class="drop-down-clients-mobile">
+                        <div class="dropdown-content-clients-mobile animate__bounceIn" id="myDropdown">
+                            <a class="conviniencem" href="#">Convinience Store</a>
+                            <a class="hardwarem" href="#">Hardware</a>
+                            <a class="grocerym" href="#">Grocery</a>
+                            <a class="pharmacym" href="#">Pharmacy</a>
+                            <a class="phonem" href="#">Phone Accessories</a>
+                            <a class="restaurantm" href="#">Restaurant</a>
+                            <a class="retailm" href="#">Retail Store</a>
+                            <a class="sarim" href="#">Sari-sari Store</a>
+                            <a class="skinm" href="#">Skin Care Clinic</a>
+                            <a class="vetm" href="#">Vet Clinic</a>
+                            <a class="pasalubongm" href="#">Pasalubong Shop</a>
+                            <a class="othersm" href="#">Others</a>
+                        </div>
+                    </div>
+                    <span>
+                        <li class="nav-item">
+                            <a id="co" href="../index.html#contact">Contact Us</a>
+                        </li>
+                    </span>
+                </ul>
+                <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+            <div class="drop-down-features">
+                <div class="dropdown-content-features animate__bounceIn animate__fadeInDown" id="myDropdown">
+                    <a href="#">Android Based</a>
+                    <a href="#">Window Based</a>
+                </div>
+            </div>
+        
+            <div class="drop-down-products animate__bounceIn animate__fadeInDown">
+                <div class="description">
+                    <h1>Products</h1>
+                    <p>Thank you for choosing our services! We're here to help with any questions or feedback you may have.</p>
+                    <button onclick="location.href='#clients'">
+                        <span>Our Products</span>
+                        <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                            <path
+                                d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                                fill="black"></path>
+                        </svg>
+                    </button>
+                </div>
+                <p class="product1">Product1</p>
+                <p class="product2">product2</p>
+                <p class="product3">product3</p>
+                <p class="product4">product4</p>
+                <p class="product5">product5</p>
+                <p class="product6">product6</p>
+                <p class="product7">product7</p>
+                <p class="product8">product8</p>
+                <p class="product9">product9</p>
+            </div>
+        
+            <div class="drop-down-clients">
+                <div class="dropdown-content-clients animate__bounceIn animate__fadeInDown" id="myDropdown">
+                    <div class="client-section">
+                        <h1>Clients</h1>
+                        <p>Thank you for choosing our services! We're here to help with any questions or feedback you may have.
+                        </p>
+                        <button onclick="location.href='#clients'">
+                            <span>Message from us</span>
+                            <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                                <path
+                                    d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                                    fill="black"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <a class="convinience">Convinience Store</a>
+                    <a class="hardware">Hardware</a>
+                    <a class="grocery">Grocery</a>
+                    <a class="pharmacy">Pharmacy</a>
+                    <a class="phone">Phone Accessories</a>
+                    <a class="restaurant">Restaurant</a>
+                    <a class="retail">Retail Store</a>
+                    <a class="sari">Sari-sari Store</a>
+                    <a class="skin">Skin Care Clinic</a>
+                    <a class="vet">Vet Clinic</a>
+                    <a class="pasalubong">Pasalubong Shop</a>
+                    <a class="others">Others</a>
+                </div>
+            </div>
+        </div>
+        <!-- nav bar end -->
+        <div class="all-clients">
+            <h3 class="clients-category animate__bounceIn"></h3>
+            <div class="all-clients-child">
+                <!-- Content Goes Here -->
+            </div>
+            <button id="loadMore">
+                <span>Load more</span>
+                <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                    <path
+                        d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                        fill="black"></path>
+                </svg>
+            </button>
+        </div>
+        <!-- FOOTER -->
+        <section class="footer">
+            <h5>Copyright © 2023 AffordaPOS</h5>
+        </section>
+    </div>
+
+    <!-- The Modal Image -->
+    <div id="modal" class="modal">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <img id="modal-content" class="modal-content animate__bounceIn" />
+        <div id="modal-caption" class="modal-caption"></div>
+    </div>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <!-- javascript -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../index2.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
