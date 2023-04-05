@@ -1969,6 +1969,7 @@ body[light-mode="dark"] #pro{
     width: 250px;
     padding: 10px 15px;
     border-radius: 20px 20px 0 0;
+    transition: width .5s ease-out;
 
     & h2 {
       font-size: clamp(.3rem, 0.7697rem + 1.2632vw, 1.3rem);
