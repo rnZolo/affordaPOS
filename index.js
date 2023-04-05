@@ -715,10 +715,63 @@ createList(Of.title, Of.list, itemOf)
 
 //products
 const productList = document.querySelectorAll(".product")
+const productListMobile = document.querySelectorAll(".productm")
 const modalProducts = document.querySelector(".products-modal")
 const modalContent = document.querySelector(".modal-content")
 const closeModalProducts = document.querySelector(".close-modal")
 const modalProductsText = document.querySelector(".modal-header h3")
+
+//FOR MOBILE
+for (let productItemsMobile of productListMobile)
+productItemsMobile.addEventListener("click", function(){
+    if (this == productListMobile[0]){
+        avr()
+    }
+    if (this == productListMobile[1]){
+        barcodescanner()
+    }
+    if (this == productListMobile[2]){
+        cashdrawer()
+    }
+    if (this == productListMobile[3]){
+        hdmi()
+    }
+    if (this == productListMobile[4]){
+        kbmouse()
+    }
+    if (this == productListMobile[5]){
+        moneydetector()
+    }
+    if (this == productListMobile[6]){
+        monitor()
+    }
+    if (this == productListMobile[7]){
+        ram()
+    }
+    if (this == productListMobile[8]){
+        speaker()
+    }
+    if (this == productListMobile[9]){
+        ssd()
+    }
+    if (this == productListMobile[10]){
+        tablet()
+    }
+    if (this == productListMobile[11]){
+        cam()
+    }
+    if (this == productListMobile[12]){
+        thermalprinter()
+    }
+    if (this == productListMobile[13]){
+        unit()
+    }
+    if (this == productListMobile[14]){
+        wifidongle()
+    }
+})
+
+//FOR DESKTOP
 for (let productItems of productList)
 productItems.addEventListener("click", function(){
     if (this == productList[0]){
