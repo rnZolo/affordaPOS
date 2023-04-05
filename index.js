@@ -1,3 +1,4 @@
+
         /////////////////////////////////////////////////////////////////////////MMOBILE NAVIGATOR////////////////////////////////////////////////////////////////////////////////////
         // harware-items
         document.querySelector(".hardwarem").addEventListener("click", Hardwarem);
@@ -609,6 +610,11 @@ function Retailbarcode()
 const posBtns = document.querySelectorAll('.pos-heading')
 const navPosBtns = document.querySelectorAll('.BasedBTN')
 const navPosBtnsMob = document.querySelectorAll('.BasedBTNMob')
+const preloadImg = ['./resources/collaboration.jpg','./resources/collaboration.jpg','./resources/windowPkg.png']
+for (const url of preloadImg) {
+    const img = new Image();
+    img.src = url;
+    }
 
 // target elements
 const androidBased = document.querySelector('.android-based')
@@ -672,28 +678,35 @@ itemPM= document.querySelector('.item-PM'),
 itemCM= document.querySelector('.item-CM'),
 itemSS= document.querySelector('.item-SS'),
 itemCrt= document.querySelector('.item-Crt'),
-itemOf= document.querySelector('.item-Of')
+itemOf= document.querySelector('.item-Of')       
+// windowsItem.removeChild(accorIcon)
+// accorIcon = document.createElement('i')
+// windowsItem.appendChild(accorIcon)
+// accorIcon.classList.add('fa-solid fa-angle-right fa-2xs')
+
+
+
 
 let dashB = {title: 'Dashboard',
-list:[ " Data summary "]},
+list:[ " Data summary "], iconClass:['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']},
 sm = {title: 'Sales Management',
-list:["Sales Transaction/Cashiering", "Starting Cash" ," Cash Drop" ," Cash Count" , "Cash Counter" , "Sales Quotation" , "Credits/Pay Later" , "Secondary Display/Customer Display" ," Discounts" ," Hold Transaction" , "Customer/Membership" , "Price Check" , "Order Print" , "Senior Citizen/PWD Discount" ," Custom discount (Amount or Percent)" , "Void transaction with password (Item and Discount)" , "Change Selling Price" ," Barcode / Search Item Name", " Cash, Credit Card, and other MOP available"]}, 
+list:["Sales Transaction/Cashiering", "Starting Cash" ," Cash Drop" ," Cash Count" , "Cash Counter" , "Sales Quotation" , "Credits/Pay Later" , "Secondary Display/Customer Display" ," Discounts" ," Hold Transaction" , "Customer/Membership" , "Price Check" , "Order Print" , "Senior Citizen/PWD Discount" ," Custom discount (Amount or Percent)" , "Void transaction with password (Item and Discount)" , "Change Selling Price" ," Barcode / Search Item Name", " Cash, Credit Card, and other MOP available"], iconClass:['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']}, 
 srm = {title: 'Sales Report Management',
-list:[ "Pending Quotaion List", "Receipt/Invoice List (Can be filter by Cashier, MOP and by date range)", "Export Sales", "Cancel Sales/Transaction", "Credit Status", "Store Report"," Staff Report", "Store Calendar Report"," Members Report", "Item Sales"," Discount Report", "Credit Report", "Category Sales", "Stock Card (History trail)", "Stock/Pull Out", "Out of Stock Items Report", "Best Seller Items", "Item Expiry Report", "Expiration notification"," Item Return Report", "Expenses Report", "Cash Logs", "Mode of Payment Breakdown Report", "Top-up Reports", "Supplier PO Item Report"],},
+list:[ "Pending Quotaion List", "Receipt/Invoice List (Can be filter by Cashier, MOP and by date range)", "Export Sales", "Cancel Sales/Transaction", "Credit Status", "Store Report"," Staff Report", "Store Calendar Report"," Members Report", "Item Sales"," Discount Report", "Credit Report", "Category Sales", "Stock Card (History trail)", "Stock/Pull Out", "Out of Stock Items Report", "Best Seller Items", "Item Expiry Report", "Expiration notification"," Item Return Report", "Expenses Report", "Cash Logs", "Mode of Payment Breakdown Report", "Top-up Reports", "Supplier PO Item Report"], iconClass:['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']},
 im = {title: 'Inventory Management',
-list:["Item Masterlist", "Item Category", "Stock In", "Stock Out", "Warehouse Inventory", "Stock Transfer (Warehouse to Store stock transfer)", "Price Adjustment", "Purchase Order"," Receiving Order", "Supplier"],},
+list:["Item Masterlist", "Item Category", "Stock In", "Stock Out", "Warehouse Inventory", "Stock Transfer (Warehouse to Store stock transfer)", "Price Adjustment", "Purchase Order"," Receiving Order", "Supplier"], iconClass:['fa-solid', 'fa-angle-right', 'accor-icon', 'accor-icon', 'normal-rotation']},
 pm = {title: 'Parameters Management',
-list:[" Create Unit of Measure", "Create Mode of Payment", "Credit Terms", "Expense"]}, 
+list:[" Create Unit of Measure", "Create Mode of Payment", "Credit Terms", "Expense"], iconClass:['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']}, 
 cm = {title: 'Customers Management',
-list:[ "Membership", "Member/Customer", "Vouchers", "Discounts"]},
+list:[ "Membership", "Member/Customer", "Vouchers", "Discounts"], iconClass:['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']},
 ss = {title: 'System Setting',
-list:[ "User Access ", "Backup/Restore Database"," Stock warehouse" , "System Config"," Receipt Config", "Archive"]}
+list:[ "User Access ", "Backup/Restore Database"," Stock warehouse" , "System Config"," Receipt Config", "Archive"],  iconClass:['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']}
 Crtf = {title: 'Cart',
-list:[ "product Navigation", " transaction computation", " credit, cash drops, cash count and close counter", " secondary monitor display (for customer)", " database"],},
+list:[ "product Navigation", " transaction computation", " credit, cash drops, cash count and close counter", " secondary monitor display (for customer)", " database"], iconClass:['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']},
 Of = {title: 'Other Feaures',
-list:[" Notifications", " Open Drawer", " Reprint Receipt", " Import and export CSV",  "Sending Reports to Email",  "Print Report via PDF"]}
+list:[" Notifications", " Open Drawer", " Reprint Receipt", " Import and export CSV",  "Sending Reports to Email",  "Print Report via PDF"], iconClass:['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']}
 
-function createList(title, liList, cont){
+function createList(title, liList, iClass, cont){
     let cosTit = document.createElement('h3')
     cosTit.textContent = title
     let cosUl = document.createElement('ul')
@@ -704,93 +717,105 @@ function createList(title, liList, cont){
     });
     cont.appendChild(cosTit)
     cont.appendChild(cosUl)
+    const accorIcon = document.createElement('i')
+    cont.appendChild(accorIcon)
+    iClass.forEach((icl) => {
+        accorIcon.classList.add(icl)
+    })
+    // accorIcon.style.display = 'none'
 }
 
-createList(dashB.title, dashB.list, itemDashB)
-createList(sm.title, sm.list, itemSM)
-createList(srm.title, srm.list, itemSRM)
-createList(im.title, im.list, itemIM)
-createList(pm.title, pm.list, itemPM)
-createList(cm.title, cm.list, itemCM)
-createList(ss.title, ss.list, itemSS)
-createList(Crtf.title, Crtf.list, itemCrt)
-createList(Of.title, Of.list, itemOf)
+createList(dashB.title, dashB.list, dashB.iconClass, itemDashB)
+createList(sm.title, sm.list, sm.iconClass, itemSM)
+createList(srm.title, srm.list, srm.iconClass, itemSRM)
+createList(im.title, im.list, im.iconClass, itemIM)
+createList(pm.title, pm.list, pm.iconClass, itemPM)
+createList(cm.title, cm.list, cm.iconClass, itemCM)
+createList(ss.title, ss.list, ss.iconClass, itemSS)
+createList(Crtf.title, Crtf.list, Crtf.iconClass, itemCrt)
+createList(Of.title, Of.list, Of.iconClass, itemOf)
 
-const images = document.querySelectorAll('img'),
-ulChs = document.querySelectorAll('.windows-item ul')
+const images = document.querySelectorAll('img')
+
 images.forEach((image) => {
     image.setAttribute('draggable', false)
 })
 
+const ulChs = document.querySelectorAll('.windows-item ul')
 let viewPortWidth = window.innerWidth,
 happenOnce = false, // happened to be small?
 itHas = false //window-flex is applied?
+
 checkVP()
 window.addEventListener('resize', checkVP)
 
-function checkVP(){
-        viewPortWidth = window.innerWidth
-        if (viewPortWidth <= 450){
-            ulChs.forEach((ulsCh) => {
-                ulsCh.style.display = 'none'
-            })
-            happenOnce = true
-            asMediaQuery()
-        } 
-        if ( viewPortWidth > 450){
-            // apply reset
-            ulChs.forEach((ulsCh) => {
-                ulsCh.style.display = 'flex'
-            })
-            if(itHas){
-                windowsGrid.classList.replace('windows-flex', 'windows-grid',)
-                itHas = false
-                ulChs.forEach((ulsCh) => {
-                    ulsCh.style.height = '90%'
-                })
-                windowsItems.forEach((windowsItem) => {
-                    windowsItem.classList.remove('mobile-infopos')
-                    windowsItem.removeEventListener
-                })
-            }
-        }
+function checkVP() {
+    viewPortWidth = window.innerWidth;
+    if (viewPortWidth <= 450) {
+      // Apply mobile styles
+      ulChs.forEach((ulsCh) => {
+        ulsCh.style.display = "none";
+      });
+      happenOnce = true;
+      asMediaQuery();
     }
-
-function asMediaQuery(){
-    if (happenOnce){ // smallscreen?
-    //if yes add classes for mobile styles else..
-    // window-grid to window-flex
-    windowsGrid.classList.replace('windows-grid', 'windows-flex')
-    itHas = true // flex is applied
-
-        // window-items accordion style
-    windowsItems.forEach((windowsItem) => {
-        windowsItem.classList.add('mobile-infopos');
-
-        // add click event listener to each window-item
-        windowsItem.addEventListener('click', function () {
-            const ulCh = this.querySelector('ul');
-            const isClicked = this.classList.contains('clicked');
-        
-            // close all other items
-            windowsItems.forEach((item) => {
-                if (item !== this) {
-                    item.classList.remove('clicked');
-                    item.querySelector('ul').style.display = 'none';
-                }
-            }); 
-
-            if (isClicked) {
-                // if this item is already clicked, close it
-                this.classList.remove('clicked');
-                ulCh.style.display = 'none';
-            } else {
-                // if this item is not clicked, open it
-                this.classList.add('clicked');
-                ulCh.style.display = 'flex';
-            }
+    if (viewPortWidth > 450) {
+      // Apply reset
+      ulChs.forEach((ulsCh) => {
+        ulsCh.style.display = "flex";
+      });
+      if (itHas) {
+        // Remove mobile styles
+        windowsGrid.classList.replace("windows-flex", "windows-grid");
+        itHas = false;
+        ulChs.forEach((ulsCh) => {
+          ulsCh.style.height = "90%";
         });
+        windowsItems.forEach((windowsItem) => {
+          windowsItem.classList.remove("mobile-infopos");
+          windowsItem.removeEventListener("click", clickHandler); // Remove the event listener
+        });
+      }
+    }
+  }
+  
+  function asMediaQuery() {
+    if (happenOnce) {
+      // Add mobile styles
+      windowsGrid.classList.replace("windows-grid", "windows-flex");
+      itHas = true;
+  
+        windowsItems.forEach((windowsItem) => {
+        windowsItem.classList.add("mobile-infopos");
+        windowsItem.addEventListener("click", clickHandler); // Add the event listener
+      });
+      applyMob = false;
+    }
+  }
+  
+  function clickHandler() {
+    const ulCh = this.querySelector("ul");
+    // ulCh.classList.add('elong')
+    const iCh = this.querySelector("i");
+    const isClicked = this.classList.contains("clicked");
+  
+    // Close all other items
+    windowsItems.forEach((item) => {
+      if (item !== this) {
+        item.classList.remove("clicked");
+        item.querySelector("ul").style.display = "none";
+      }
     });
-    applyMob = false
-}
-}
+  
+    if (isClicked) {
+      // If this item is already clicked, close it
+      this.classList.remove("clicked");
+      ulCh.style.display = "none";
+      iCh.classList.replace('rotate-it','normal-rotation')
+    } else {
+      // If this item is not clicked, open it
+      this.classList.add("clicked");
+      ulCh.style.display = "flex";
+      iCh.classList.replace('normal-rotation','rotate-it')
+    }
+  }
