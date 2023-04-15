@@ -802,8 +802,13 @@ function checkVP() {
     // Close all other items
     windowsItems.forEach((item) => {
       if (item !== this) {
+        let ic = item.querySelector('i'),
+        yes = ic.classList.contains('rotate-it')
+        if (yes){
+            console.log(ic.classList)
+            ic.classList.replace('rotate-it', 'normal-rotation')
+        }
         item.classList.remove("clicked");
-        item.querySelector("ul").style.display = "none";
       }
     });
   
