@@ -2941,8 +2941,6 @@ body[light-mode=dark] .text p {
 .products-modal .modal-handler {
   position: absolute;
   width: 60vw;
-  height: -moz-fit-content;
-  height: fit-content;
   min-width: 550px;
   min-height: 400px;
   padding: 10px 30px;
@@ -2983,6 +2981,7 @@ body[light-mode=dark] .text p {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 .products-modal .modal-handler .modal-content .swiper-slide img {
   display: block;
