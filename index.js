@@ -1851,7 +1851,6 @@ const wifidongle = () => {
     });
 }
 
-
 const images = document.querySelectorAll('img')
 
 images.forEach((image) => {
@@ -1919,12 +1918,13 @@ function clickHandler() {
     // Close all other items
     windowsItems.forEach((item) => {
         if (item !== this) {
-            item.classList.remove("clicked");
-            item.querySelector("ul").style.display = "none";
-            let yes = item.classList.contains('rotate-it')
+            let ic = item.querySelector('i'),
+                yes = ic.classList.contains('rotate-it')
             if (yes) {
-                item.classList.replace('rotate-it', 'normal-rotation')
+                console.log(ic.classList)
+                ic.classList.replace('rotate-it', 'normal-rotation')
             }
+            item.classList.remove("clicked");
         }
     });
 
