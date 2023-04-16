@@ -408,32 +408,31 @@ $(document).ready(function () {
 })
 
 
-        // dropdown products
-        const productsbtn = document.querySelector("#pro")
-        productsbtn.addEventListener("click", productsDropdown)
-        const productsdrop =  document.querySelector(".drop-down-products")
-        const productsdropmobile = document.querySelector(".drop-down-products-mobile")
-        function productsDropdown(){
-            if(window.innerWidth <= 720){
-                if(productsdropmobile.style.display == "none"){
-                    productsdropmobile.style.display = "grid";
-                }
-                else{
-                    productsdropmobile.style.display="none";
-                }
-            }
-            else{
-                if (productsdrop.style.display == "none"){
-                    productsdrop.style.display="grid";
-                    cl.style.display = "none";
-                    f.style.display = "none";
-                }
-                else{
-                    productsdrop.style.display="none";
-                }
-            }
+// dropdown products
+const productsbtn = document.querySelector("#pro")
+productsbtn.addEventListener("click", productsDropdown)
+const productsdrop = document.querySelector(".drop-down-products")
+const productsdropmobile = document.querySelector(".drop-down-products-mobile")
+function productsDropdown() {
+    if (window.innerWidth <= 720) {
+        if (productsdropmobile.style.display == "none") {
+            productsdropmobile.style.display = "grid";
         }
-
+        else {
+            productsdropmobile.style.display = "none";
+        }
+    }
+    else {
+        if (productsdrop.style.display == "none") {
+            productsdrop.style.display = "grid";
+            cl.style.display = "none";
+            f.style.display = "none";
+        }
+        else {
+            productsdrop.style.display = "none";
+        }
+    }
+}
 
 // drop-down features
 document.querySelector("#f").addEventListener("click", Features);
@@ -484,7 +483,7 @@ function Clients() {
         {
             cl.style.display = "block"; //set large-cldropdown to visible
             f.style.display = "none"; // set small-ftdropdown to not visible
-            productsdrop.style.display="none";
+            productsdrop.style.display = "none";
         }
         else //if large-ftdropdown is visible
         {
@@ -509,7 +508,7 @@ function scrollFunction() {
     cl.style.display = "none";
     f.style.display = "none";
     productsdrop.style.display = "none";
-    productsdropmobile.style.display="none";
+    productsdropmobile.style.display = "none";
 }
 
 window.addEventListener("resize", Resize)
@@ -519,7 +518,7 @@ function Resize() {
     e.style.display = "none";
     clm.style.display = "none";
     productsdrop.style.display = "none";
-    productsdropmobile.style.display="none";
+    productsdropmobile.style.display = "none";
 }
 
 // Modal Setup
@@ -547,47 +546,47 @@ if (localStorage.lightMode == "dark") {
     app.setAttribute("light-mode", "dark");
 }
 
-        const navbar = document.querySelector(".navbar");
-        const h = document.getElementById("h");
-        const p = document.getElementById("p");
-        const ff = document.getElementById("f");
-        const clcon = document.getElementById("cl");
-        const co = document.getElementById("co");
-        const bar1 = document.getElementById("bar1");
-        const bar2 = document.getElementById("bar2");
-        const bar3 = document.getElementById("bar3");
-        const nav = document.getElementById("nav");
-        
-        function toggle_light_mode() {//navbar mode
-            var app = document.getElementsByTagName("BODY")[0];
-            if (localStorage.lightMode == "dark") {
-                localStorage.lightMode = "light";
-                app.setAttribute("light-mode", "light");
-                navbar.style.backgroundColor ="#f1f1f1"
-                h.style.color = "#121013";
-                p.style.color = "#121013";
-                ff.style.color = "#121013";
-                clcon.style.color = "#121013";
-                co.style.color = "#121013";
-                bar1.style.backgroundColor = "#121013";
-                bar2.style.backgroundColor = "#121013";
-                bar3.style.backgroundColor = "#121013";
-                nav.style.backgroundColor = "#F1F1F1";
-            } else {
-                localStorage.lightMode = "dark";
-                app.setAttribute("light-mode", "dark");
-                navbar.style.backgroundColor = "#121013";
-                h.style.color = "#F1F1F1";
-                p.style.color = "#F1F1F1";
-                ff.style.color = "#F1F1F1";
-                clcon.style.color = "#F1F1F1";
-                co.style.color = "#F1F1F1";
-                bar1.style.backgroundColor = "#F1F1F1";
-                bar2.style.backgroundColor = "#F1F1F1";
-                bar3.style.backgroundColor = "#F1F1F1";
-                nav.style.backgroundColor = "#121013";
-            }
-        }   
+const navbar = document.querySelector(".navbar");
+const h = document.getElementById("h");
+const p = document.getElementById("p");
+const ff = document.getElementById("f");
+const clcon = document.getElementById("cl");
+const co = document.getElementById("co");
+const bar1 = document.getElementById("bar1");
+const bar2 = document.getElementById("bar2");
+const bar3 = document.getElementById("bar3");
+const nav = document.getElementById("nav");
+
+function toggle_light_mode() {//navbar mode
+    var app = document.getElementsByTagName("BODY")[0];
+    if (localStorage.lightMode == "dark") {
+        localStorage.lightMode = "light";
+        app.setAttribute("light-mode", "light");
+        navbar.style.backgroundColor = "#f1f1f1"
+        h.style.color = "#121013";
+        p.style.color = "#121013";
+        ff.style.color = "#121013";
+        clcon.style.color = "#121013";
+        co.style.color = "#121013";
+        bar1.style.backgroundColor = "#121013";
+        bar2.style.backgroundColor = "#121013";
+        bar3.style.backgroundColor = "#121013";
+        nav.style.backgroundColor = "#F1F1F1";
+    } else {
+        localStorage.lightMode = "dark";
+        app.setAttribute("light-mode", "dark");
+        navbar.style.backgroundColor = "#121013";
+        h.style.color = "#F1F1F1";
+        p.style.color = "#F1F1F1";
+        ff.style.color = "#F1F1F1";
+        clcon.style.color = "#F1F1F1";
+        co.style.color = "#F1F1F1";
+        bar1.style.backgroundColor = "#F1F1F1";
+        bar2.style.backgroundColor = "#F1F1F1";
+        bar3.style.backgroundColor = "#F1F1F1";
+        nav.style.backgroundColor = "#121013";
+    }
+}
 
 window.addEventListener(
     "storage",
@@ -741,23 +740,1060 @@ document.onreadystatechange = function () {
     }
 }
 //MESSENGER PLUGIN
-    var chatbox = document.getElementById('fb-customer-chat');
-    chatbox.setAttribute("page_id", "342464657012399");
-    chatbox.setAttribute("attribution", "biz_inbox");
-    
-    // Your SDK code 
-    window.fbAsyncInit = function() {
-        FB.init({
-            xfbml            : true,
-            version          : 'v16.0'
-        });
-    };
+var chatbox = document.getElementById('fb-customer-chat');
+chatbox.setAttribute("page_id", "342464657012399");
+chatbox.setAttribute("attribution", "biz_inbox");
 
-    (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-    }(document, 'script', 'facebook-jssdk'));
+// Your SDK code 
+window.fbAsyncInit = function () {
+    FB.init({
+        xfbml: true,
+        version: 'v16.0'
+    });
+};
+
+(function (d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));
 //MESSENGER PLUG IN END
+
+//products
+const productList = document.querySelectorAll(".product")
+const productListMobile = document.querySelectorAll(".productm")
+const modalProducts = document.querySelector(".products-modal")
+const modalContent = document.querySelector(".modal-content")
+const closeModalProducts = document.querySelector(".close-modal")
+const modalProductsText = document.querySelector(".modal-header h3")
+
+//FOR MOBILE
+for (let productItemsMobile of productListMobile)
+    productItemsMobile.addEventListener("click", function () {
+        if (this == productListMobile[0]) {
+            avr()
+        }
+        if (this == productListMobile[1]) {
+            barcodescanner()
+        }
+        if (this == productListMobile[2]) {
+            cashdrawer()
+        }
+        if (this == productListMobile[3]) {
+            hdmi()
+        }
+        if (this == productListMobile[4]) {
+            kbmouse()
+        }
+        if (this == productListMobile[5]) {
+            moneydetector()
+        }
+        if (this == productListMobile[6]) {
+            monitor()
+        }
+        // if (this == productListMobile[7]){
+        //     ram()
+        // }
+        if (this == productListMobile[7]) {
+            speaker()
+        }
+        // if (this == productListMobile[9]){
+        //     ssd()
+        // }
+        if (this == productListMobile[8]) {
+            tablet()
+        }
+        if (this == productListMobile[9]) {
+            cam()
+        }
+        if (this == productListMobile[10]) {
+            thermalprinter()
+        }
+        if (this == productListMobile[11]) {
+            unit()
+        }
+        if (this == productListMobile[12]) {
+            wifidongle()
+        }
+    })
+
+//FOR DESKTOP
+for (let productItems of productList)
+    productItems.addEventListener("click", function () {
+        if (this == productList[0]) {
+            avr()
+        }
+        if (this == productList[1]) {
+            barcodescanner()
+        }
+        if (this == productList[2]) {
+            cashdrawer()
+        }
+        if (this == productList[3]) {
+            hdmi()
+        }
+        if (this == productList[4]) {
+            kbmouse()
+        }
+        if (this == productList[5]) {
+            moneydetector()
+        }
+        if (this == productList[6]) {
+            monitor()
+        }
+        // if (this == productList[7]){
+        //     ram()
+        // }
+        if (this == productList[7]) {
+            speaker()
+        }
+        // if (this == productList[9]){
+        //     ssd()
+        // }
+        if (this == productList[8]) {
+            tablet()
+        }
+        if (this == productList[9]) {
+            cam()
+        }
+        if (this == productList[10]) {
+            thermalprinter()
+        }
+        if (this == productList[11]) {
+            unit()
+        }
+        if (this == productList[12]) {
+            wifidongle()
+        }
+    })
+
+closeModalProducts.addEventListener("click", function () {
+    modalProducts.style.display = "none";
+    modalContent.innerHTML = "";
+})
+
+const avr = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "AVR"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/AVR/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/AVR/2.jpg' />
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/AVR/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/AVR/2.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+const barcodescanner = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "Barcode Scanner"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Barcode Scanner/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Barcode Scanner//2.jpg' />
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Barcode Scanner//1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Barcode Scanner//2.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+const cashdrawer = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "Cash Drawer"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Cash Drawer/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Cash Drawer/2.jpg' />
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Cash Drawer/3.jpg' />
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Cash Drawer/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Cash Drawer/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Cash Drawer/3.jpg' />
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+const hdmi = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "HDMI"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/HDMI/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/HDMI/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/HDMI/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/HDMI/4.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/HDMI/5.jpg'/>
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+        <div class='swiper-slide'>
+            <img src='../Per Item/HDMI/1.jpg'/>
+        </div>
+        <div class='swiper-slide'>
+            <img src='../Per Item/HDMI/2.jpg'/>
+        </div>
+        <div class='swiper-slide'>
+            <img src='../Per Item/HDMI/3.jpg'/>
+        </div>
+        <div class='swiper-slide'>
+            <img src='../Per Item/HDMI/4.jpg'/>
+        </div>
+        <div class='swiper-slide'>
+            <img src='../Per Item/HDMI/5.jpg'/>
+        </div>
+            </div>
+        </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+const kbmouse = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "Keyboard & Mouse"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/KB _ Mouse/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/KB _ Mouse/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/KB _ Mouse/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/KB _ Mouse/4.jpg'/>
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/KB _ Mouse/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/KB _ Mouse/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/KB _ Mouse/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/KB _ Mouse/4.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+const moneydetector = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "Money Detector"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Money Detector/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Money Detector/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Money Detector/3.jpg'/>
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Money Detector/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Money Detector/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Money Detector/3.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+const monitor = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "Monitor"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/4.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/5.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/6.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/7.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/8.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/9.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/10.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/11.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/12.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/13.jpg'/>
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/4.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/5.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/6.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/7.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/8.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/9.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/10.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/11.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/12.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Monitor/13.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+// const ram = () =>{
+//     modalProducts.style.display = "flex";
+//     modalProductsText.innerHTML = "RAM"
+//     modalContent.innerHTML = `
+//     <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+//         <div class='swiper-wrapper'>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/RAM/1.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/RAM/2.jpg'/>
+//             </div>
+//         </div>
+//         <div class='swiper-button-next'></div>
+//         <div class='swiper-button-prev'></div>
+//     </div>
+//     <div thumbsSlider='' class='swiper mySwiper4'>
+//         <div class='swiper-wrapper'>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/RAM/1.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/RAM/2.jpg'/>
+//             </div>
+//         </div>
+//     </div>    
+//     `;
+//     var swiper = new Swiper(".mySwiper4", {
+//         spaceBetween: 5,
+//         slidesPerView: 4,
+//         freeMode: true,
+//         watchSlidesProgress: true,
+//     });
+
+//     var swiper = new Swiper(".mySwiper3", {
+//     spaceBetween: 10,
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
+//     thumbs: {
+//         swiper: swiper,
+//         },
+//     });
+// }
+
+const speaker = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "Speaker"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Speaker/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Speaker/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Speaker/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Speaker/4.jpg'/>
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Speaker/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Speaker/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Speaker/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Speaker/4.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+// const ssd = () =>{
+//     modalProducts.style.display = "flex";
+//     modalProductsText.innerHTML = "SSD"
+//     modalContent.innerHTML = `
+//     <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+//         <div class='swiper-wrapper'>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/1.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/2.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/3.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/4.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/5.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/6.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/7.jpg'/>
+//             </div>
+//         </div>
+//         <div class='swiper-button-next'></div>
+//         <div class='swiper-button-prev'></div>
+//     </div>
+//     <div thumbsSlider='' class='swiper mySwiper4'>
+//         <div class='swiper-wrapper'>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/1.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/2.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/3.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/4.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/5.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/6.jpg'/>
+//             </div>
+//             <div class='swiper-slide'>
+//                 <img src='../Per Item/SSD/7.jpg'/>
+//             </div>
+//         </div>
+//     </div>    
+//     `;
+//     var swiper = new Swiper(".mySwiper4", {
+//         spaceBetween: 5,
+//         slidesPerView: 4,
+//         freeMode: true,
+//         watchSlidesProgress: true,
+//     });
+
+//     var swiper = new Swiper(".mySwiper3", {
+//     spaceBetween: 10,
+//     navigation: {
+//         nextEl: ".swiper-button-next",
+//         prevEl: ".swiper-button-prev",
+//     },
+//     thumbs: {
+//         swiper: swiper,
+//         },
+//     });
+// }
+
+const tablet = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "Tablet"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Tablet only/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Tablet only/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Tablet only/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Tablet only/4.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Tablet only/5.jpg'/>
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Tablet only/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Tablet only/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Tablet only/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Tablet only/4.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Tablet only/5.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+const cam = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "Tenda CP3 Camera"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/tenda cp3 cam/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/tenda cp3 cam/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/tenda cp3 cam/3.jpg'/>
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/tenda cp3 cam/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/tenda cp3 cam/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/tenda cp3 cam/3.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+const thermalprinter = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "Thermal Printer"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/4.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/5.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/6.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/7.jpg'/>
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/4.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/5.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/6.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Thermal Printer/7.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+const unit = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "System Unit"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/4.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/5.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/6.jpg'/>
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/3.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/4.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/5.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Unit/6.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
+
+const wifidongle = () => {
+    modalProducts.style.display = "flex";
+    modalProductsText.innerHTML = "Wifi Dongle"
+    modalContent.innerHTML = `
+    <div style='swiper-navigation-color: #fff; --swiper-pagination-color: #fff' class='swiper3 swiper mySwiper3'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Wifi Dongle/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Wifi Dongle/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Wifi Dongle/3.jpg'/>
+            </div>
+        </div>
+        <div class='swiper-button-next'></div>
+        <div class='swiper-button-prev'></div>
+    </div>
+    <div thumbsSlider='' class='swiper mySwiper4'>
+        <div class='swiper-wrapper'>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Wifi Dongle/1.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Wifi Dongle/2.jpg'/>
+            </div>
+            <div class='swiper-slide'>
+                <img src='../Per Item/Wifi Dongle/3.jpg'/>
+            </div>
+        </div>
+    </div>    
+    `;
+    var swiper = new Swiper(".mySwiper4", {
+        spaceBetween: 5,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+    });
+
+    var swiper = new Swiper(".mySwiper3", {
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+            swiper: swiper,
+        },
+    });
+}
