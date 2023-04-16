@@ -1931,7 +1931,6 @@ function clickHandler() {
             let ic = item.querySelector('i'),
                 yes = ic.classList.contains('rotate-it')
             if (yes) {
-                console.log(ic.classList)
                 ic.classList.replace('rotate-it', 'normal-rotation')
             }
             item.classList.remove("clicked");
