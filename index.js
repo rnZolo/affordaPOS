@@ -640,7 +640,10 @@ posbased(navPosBtnMob, navPosBtnsMob, androidBased, windowBased)
 
 
 
-const itemDashB = document.querySelector('.item-dashb'),
+
+const windowsItems = document.querySelectorAll('.windows-item'),
+    windowsGrid = document.querySelector('.win-change'),
+    itemDashB = document.querySelector('.item-dashb'),
     itemSM = document.querySelector('.item-SM'),
     itemSRM = document.querySelector('.item-SRM'),
     itemIM = document.querySelector('.item-IM'),
@@ -649,6 +652,7 @@ const itemDashB = document.querySelector('.item-dashb'),
     itemSS = document.querySelector('.item-SS'),
     itemCrt = document.querySelector('.item-Crt'),
     itemOf = document.querySelector('.item-Of')
+// windowsItem.removeChild(accorIcon)
 
 let dashB = {
     title: 'Dashboard',
