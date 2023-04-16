@@ -1933,6 +1933,7 @@ function clickHandler() {
             if (yes) {
                 ic.classList.replace('rotate-it', 'normal-rotation')
             }
+            item.querySelector('ul').style.display = 'none';
             item.classList.remove("clicked");
         }
     });
