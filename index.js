@@ -597,7 +597,6 @@ windowBased.style.display = 'none'
 function posbased(nd, grp, t1, t2) {
     for (nd of grp)
         nd.addEventListener('click', function () {
-            console.log(nd)
             if (this !== grp[0]) {
                 t2.style.display = 'block'
                 t1.style.display = 'none'
@@ -656,42 +655,42 @@ const windowsItems = document.querySelectorAll('.windows-item'),
 
 let dashB = {
     title: 'Dashboard',
-    list: [" Data summary "]
+    list: [" Data summary "], iconClass: ['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']
 },
     sm = {
         title: 'Sales Management',
-        list: ["Sales Transaction/Cashiering", "Starting Cash", " Cash Drop", " Cash Count", "Cash Counter", "Sales Quotation", "Credits/Pay Later", "Secondary Display/Customer Display", " Discounts", " Hold Transaction", "Customer/Membership", "Price Check", "Order Print", "Senior Citizen/PWD Discount", " Custom discount (Amount or Percent)", "Void transaction with password (Item and Discount)", "Change Selling Price", " Barcode / Search Item Name", " Cash, Credit Card, and other MOP available"]
+        list: ["Sales Transaction/Cashiering", "Starting Cash", " Cash Drop", " Cash Count", "Cash Counter", "Sales Quotation", "Credits/Pay Later", "Secondary Display/Customer Display", " Discounts", " Hold Transaction", "Customer/Membership", "Price Check", "Order Print", "Senior Citizen/PWD Discount", " Custom discount (Amount or Percent)", "Void transaction with password (Item and Discount)", "Change Selling Price", " Barcode / Search Item Name", " Cash, Credit Card, and other MOP available"], iconClass: ['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']
     },
     srm = {
         title: 'Sales Report Management',
-        list: ["Pending Quotaion List", "Receipt/Invoice List (Can be filter by Cashier, MOP and by date range)", "Export Sales", "Cancel Sales/Transaction", "Credit Status", "Store Report", " Staff Report", "Store Calendar Report", " Members Report", "Item Sales", " Discount Report", "Credit Report", "Category Sales", "Stock Card (History trail)", "Stock/Pull Out", "Out of Stock Items Report", "Best Seller Items", "Item Expiry Report", "Expiration notification", " Item Return Report", "Expenses Report", "Cash Logs", "Mode of Payment Breakdown Report", "Top-up Reports", "Supplier PO Item Report"],
+        list: ["Pending Quotaion List", "Receipt/Invoice List (Can be filter by Cashier, MOP and by date range)", "Export Sales", "Cancel Sales/Transaction", "Credit Status", "Store Report", " Staff Report", "Store Calendar Report", " Members Report", "Item Sales", " Discount Report", "Credit Report", "Category Sales", "Stock Card (History trail)", "Stock/Pull Out", "Out of Stock Items Report", "Best Seller Items", "Item Expiry Report", "Expiration notification", " Item Return Report", "Expenses Report", "Cash Logs", "Mode of Payment Breakdown Report", "Top-up Reports", "Supplier PO Item Report"], iconClass: ['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']
     },
     im = {
         title: 'Inventory Management',
-        list: ["Item Masterlist", "Item Category", "Stock In", "Stock Out", "Warehouse Inventory", "Stock Transfer (Warehouse to Store stock transfer)", "Price Adjustment", "Purchase Order", " Receiving Order", "Supplier"],
+        list: ["Item Masterlist", "Item Category", "Stock In", "Stock Out", "Warehouse Inventory", "Stock Transfer (Warehouse to Store stock transfer)", "Price Adjustment", "Purchase Order", " Receiving Order", "Supplier"], iconClass: ['fa-solid', 'fa-angle-right', 'accor-icon', 'accor-icon', 'normal-rotation']
     },
     pm = {
         title: 'Parameters Management',
-        list: [" Create Unit of Measure", "Create Mode of Payment", "Credit Terms", "Expense"]
+        list: [" Create Unit of Measure", "Create Mode of Payment", "Credit Terms", "Expense"], iconClass: ['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']
     },
     cm = {
         title: 'Customers Management',
-        list: ["Membership", "Member/Customer", "Vouchers", "Discounts"]
+        list: ["Membership", "Member/Customer", "Vouchers", "Discounts"], iconClass: ['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']
     },
     ss = {
         title: 'System Setting',
-        list: ["User Access ", "Backup/Restore Database", " Stock warehouse", "System Config", " Receipt Config", "Archive"]
+        list: ["User Access ", "Backup/Restore Database", " Stock warehouse", "System Config", " Receipt Config", "Archive"], iconClass: ['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']
     }
 Crtf = {
     title: 'Cart',
-    list: ["product Navigation", " transaction computation", " credit, cash drops, cash count and close counter", " secondary monitor display (for customer)", " database"],
+    list: ["product Navigation", " transaction computation", " credit, cash drops, cash count and close counter", " secondary monitor display (for customer)", " database"], iconClass: ['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']
 },
     Of = {
         title: 'Other Feaures',
-        list: [" Notifications", " Open Drawer", " Reprint Receipt", " Import and export CSV", "Sending Reports to Email", "Print Report via PDF"]
+        list: [" Notifications", " Open Drawer", " Reprint Receipt", " Import and export CSV", "Sending Reports to Email", "Print Report via PDF"], iconClass: ['fa-solid', 'fa-angle-right', 'accor-icon', 'normal-rotation']
     }
 
-function createList(title, liList, cont) {
+function createList(title, liList, iClass, cont) {
     let cosTit = document.createElement('h3')
     cosTit.textContent = title
     let cosUl = document.createElement('ul')
@@ -702,17 +701,24 @@ function createList(title, liList, cont) {
     });
     cont.appendChild(cosTit)
     cont.appendChild(cosUl)
+    const accorIcon = document.createElement('i')
+    cont.appendChild(accorIcon)
+    iClass.forEach((icl) => {
+        accorIcon.classList.add(icl)
+    })
+    // accorIcon.style.display = 'none'
 }
 
-createList(dashB.title, dashB.list, itemDashB)
-createList(sm.title, sm.list, itemSM)
-createList(srm.title, srm.list, itemSRM)
-createList(im.title, im.list, itemIM)
-createList(pm.title, pm.list, itemPM)
-createList(cm.title, cm.list, itemCM)
-createList(ss.title, ss.list, itemSS)
-createList(Crtf.title, Crtf.list, itemCrt)
-createList(Of.title, Of.list, itemOf)
+createList(dashB.title, dashB.list, dashB.iconClass, itemDashB)
+createList(sm.title, sm.list, sm.iconClass, itemSM)
+createList(srm.title, srm.list, srm.iconClass, itemSRM)
+createList(im.title, im.list, im.iconClass, itemIM)
+createList(pm.title, pm.list, pm.iconClass, itemPM)
+createList(cm.title, cm.list, cm.iconClass, itemCM)
+createList(ss.title, ss.list, ss.iconClass, itemSS)
+createList(Crtf.title, Crtf.list, Crtf.iconClass, itemCrt)
+createList(Of.title, Of.list, Of.iconClass, itemOf)
+
 
 //products
 const productList = document.querySelectorAll(".product")
