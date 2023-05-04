@@ -1,0 +1,1473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- style -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+    <script src="https://kit.fontawesome.com/910cc9fb7b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    
+    <!-- jquery -->
+    <script src="./jquery/jquery-3.6.0.min.js"></script>
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet" />
+    <!-- fonts end -->
+
+    <!-- aos animation effect -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="./resources/logo.png" />
+    <title>AffordaPOS</title>
+</head>
+
+<body id="mybody">
+    <div class="loader-container" id="loader">
+        <div class="spinner animate__bounceIn"></div>
+    </div>
+
+    <div class="products-modal">
+        <div class="modal-handler animate__bounceIn">
+            <div class="modal-header">
+                <h3></h3>
+                <i class="bi bi-x-lg close-modal"></i>
+            </div>
+            <div class="modal-content">
+
+            </div>
+        </div>
+    </div>
+
+    <div class="header-progress">
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <!-- HOME -->
+    <div id="services"></div>
+    <!-- nav bar -->
+    <div class="page-wrapper">
+        <div class="nav-wrapper">
+            <nav class="navbar" id="mynav">
+                <img class="navbarLogo" src="./resources/logo.png" onclick="location.href='#services'" alt="Company Logo" id="nav-logo"
+                    class="nav-logo" />
+                <div class="menu-toggle" id="mobile-menu">
+                    <span class="bar" id="bar1"></span>
+                    <span class="bar" id="bar2"></span>
+                    <span class="bar" id="bar3"></span>
+                </div>
+                <ul class="nav no-search" id="nav">
+                    <span>
+                        <li class="nav-item"><a id="h" href="#services">Services</a></li>
+                    </span>
+                    <span>
+                        <li class="nav-item"><a id="p" href="#packages">Packages</a></li>
+                    </span>
+                    <span>
+                        <li class="nav-item"><a id="pro">Products</a></li>
+                    </span>
+                    <div class="drop-down-products-mobile animate__bounceIn">
+                        <div class="productm">
+                            <img src="./Per Item/AVR/cover.jpg" alt="" srcset="">
+                            <p>AVR</p>
+                        </div>
+                        <div class="productm">
+                            <img src="./Per Item/Barcode Scanner/cover.jpg" alt="" srcset="">
+                            <p>Barcode Scanner</p>
+                        </div>
+                        <div class="productm">
+                            <img src="./Per Item/Cash Drawer/cover.jpg" alt="" srcset="">
+                            <p>Cash Drawer</p>
+                        </div>
+                        <div class="productm">
+                            <img src="./Per Item/HDMI/cover.jpg" alt="" srcset="">
+                            <p>HDMI</p>
+                        </div>
+                        <div class="productm">
+                            <img src="./Per Item/KB _ Mouse/cover.jpg" alt="" srcset="">
+                            <p>Keyboard & Mouse</p>
+                        </div>
+                        <div class="productm">
+                            <img src="./Per Item/Money Detector/cover.jpg" alt="" srcset="">
+                            <p>Money Detector</p>
+                        </div>
+                        <div class="productm">
+                            <img src="./Per Item/Monitor/cover.jpg" alt="" srcset="">
+                            <p>Monitor</p>
+                        </div>
+                        <!-- <p class="productm">RAM</p> -->
+                        <div class="productm">
+                            <img src="./Per Item/Speaker/cover.jpg" alt="" srcset="">
+                            <p>Speaker</p>
+                        </div>
+                        <div class="productm">
+                            <img src="./Per Item/Tablet only/cover.jpg" alt="" srcset="">
+                            <p>Tablet</p>
+                        </div>
+                        <!-- <p class="productm">SSD</p> -->
+                        <div class="productm">
+                            <img src="./Per Item/tenda cp3 cam/cover.jpg" alt="" srcset="">
+                            <p>Tenda CP3 Camera</p>
+                        </div>
+                        <div class="productm">
+                            <img src="./Per Item/Thermal Printer/cover.jpg" alt="" srcset="">
+                            <p>Thermal Printer</p>
+                        </div>
+                        <div class="productm">
+                            <img src="./Per Item/Unit/cover.jpg" alt="" srcset="">
+                            <p>System Unit</p>
+                        </div>
+                        <div class="productm">
+                            <img src="./Per Item/Wifi Dongle/cover.jpg" alt="" srcset="">
+                            <p>Wifi Dongle</p>
+                        </div>
+                    </div>
+                    <span>
+                        <li class="nav-item"><a id="f"> POS Features</a></i></li>
+                    </span>
+                    <div class="drop-down-features-mobile">
+                        <div class="dropdown-content-features-mobile animate__bounceIn" id="myDropdown">
+                            <a href="#and-web" class="BasedBTNMob">Android Based</a>
+                            <a href="#and-web" class="BasedBTNMob">Windows Based</a>
+                        </div>
+                    </div>
+                    <span>
+                        <li class="nav-item"><a id="cl">Clients </a></li>
+                    </span>
+                    <div class="drop-down-clients-mobile">
+                        <div class="dropdown-content-clients-mobile animate__bounceIn" id="myDropdown">
+                            <a class="conviniencem" href="#">Convinience Store</a>
+                            <a class="hardwarem" href="#">Hardware</a>
+                            <a class="grocerym" href="#">Grocery</a>
+                            <a class="pharmacym" href="#">Pharmacy</a>
+                            <a class="phonem" href="#">Phone Accessories</a>
+                            <a class="restaurantm" href="#">Restaurant</a>
+                            <a class="retailm" href="#">Retail Store</a>
+                            <a class="sarim" href="#">Sari-sari Store</a>
+                            <a class="skinm" href="#">Skin Care Clinic</a>
+                            <a class="vetm" href="#">Vet Clinic</a>
+                            <a class="pasalubongm" href="#">Pasalubong Shop</a>
+                            <a class="othersm" href="#">Others</a>
+                        </div>
+                    </div>
+                    <span>
+                        <li class="nav-item">
+                            <a id="co" href="#contact">Contact Us</a>
+                        </li>
+                    </span>
+                </ul>
+                <button class="light-mode-button" aria-label="Toggle Light Mode" onclick="toggle_light_mode()">
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+            <div class="drop-down-features">
+                <div class="dropdown-content-features animate__bounceIn animate__fadeInDown" id="myDropdown">
+                    <a href="#and-web" class="BasedBTN">Android Based</a>
+                    <a href="#and-web" class="BasedBTN">Windows Based</a>
+                </div>
+            </div>
+
+            <div class="drop-down-products animate__bounceIn animate__fadeInDown">
+                <div class="description">
+                    <h1>Products</h1>
+                </div>
+                <div class="swiper mySwiper5">
+                    <div class="swiper-wrapper">
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/AVR/cover.jpg" alt="" srcset="">
+                            <p>AVR</p>
+                        </div>
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/Barcode Scanner/cover.jpg" alt="" srcset="">
+                            <p>Barcode Scanner</p>
+                        </div>
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/Cash Drawer/cover.jpg" alt="" srcset="">
+                            <p>Cash Drawer</p>
+                        </div>
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/HDMI/cover.jpg" alt="" srcset="">
+                            <p>HDMI</p>
+                        </div>
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/KB _ Mouse/cover.jpg" alt="" srcset="">
+                            <p>Keyboard & Mouse</p>
+                        </div>
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/Money Detector/cover.jpg" alt="" srcset="">
+                            <p>Money Detector</p>
+                        </div>
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/Monitor/cover.jpg" alt="" srcset="">
+                            <p>Monitor</p>
+                        </div>
+                        <!-- <p class="product">RAM</p> -->
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/Speaker/cover.jpg" alt="" srcset="">
+                            <p>Speaker</p>
+                        </div>
+                        <!-- <p class="product">SSD</p> -->
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/Tablet only/cover.jpg" alt="" srcset="">
+                            <p>Tablet</p>
+                        </div>
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/tenda cp3 cam/cover.jpg" alt="" srcset="">
+                            <p>Tenda CP3 Camera</p>
+                        </div>
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/Thermal Printer/cover.jpg" alt="" srcset="">
+                            <p>Thermal Printer</p>
+                        </div>
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/Unit/cover.jpg" alt="" srcset="">
+                            <p>System Unit</p>
+                        </div>
+                        <div class="product swiper-slide">
+                            <img src="./Per Item/Wifi Dongle/cover.jpg" alt="" srcset="">
+                            <p>Wifi Dongle</p>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+
+            <div class="drop-down-clients">
+                <div class="dropdown-content-clients animate__bounceIn animate__fadeInDown" id="myDropdown">
+                    <div class="client-section">
+                        <h1>Clients</h1>
+                        <p>Thank you for choosing our services! We're here to help with any questions or feedback you may have.</p>
+                        <button onclick="location.href='#clients'">
+                            <span>Message from us</span>
+                            <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                                <path
+                                    d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                                    fill="black"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <a class="convinience">Convinience Store</a>
+                    <a class="hardware">Hardware</a>
+                    <a class="grocery">Grocery</a>
+                    <a class="pharmacy">Pharmacy</a>
+                    <a class="phone">Phone Accessories</a>
+                    <a class="restaurant">Restaurant</a>
+                    <a class="retail">Retail Store</a>
+                    <a class="sari">Sari-sari Store</a>
+                    <a class="skin">Skin Care Clinic</a>
+                    <a class="vet">Vet Clinic</a>
+                    <a class="pasalubong">Pasalubong Shop</a>
+                    <a class="others">Others</a>
+                </div>
+            </div>
+        </div>
+        <!-- nav bar end -->
+        <!-- sections -->
+
+        <!-- SERVICES -->
+        <section class="services">
+            <div class="heading">
+                <div class="heading-goal">
+                    <p data-aos="fade-up" data-aos-duration="1000"><i class="fa-sharp fa-solid fa-quote-left"></i>
+                        Our company’s goals are to provide affordable but quality
+                        products to clients and to provide excellent customer and
+                        technical support.
+                        <i class="fa-sharp fa-solid fa-quote-right"></i>
+                    </p>
+                </div>
+                <div class="heading-text">
+                    <h1>WHAT WE DO</h1>
+                    <h2 data-aos="fade-left" data-aos-duration="1000" class="head-highlight">
+                        Our Services
+                    </h2>
+                </div>
+            </div>
+
+            <div class="services-info">
+                <div class="services-text" data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                    <h3 data-aos="fade-up" data-aos-duration="1000">
+                        Affordable Point of Sale Complete Package
+                    </h3>
+                    <h4>Hardware & Software.</h4>
+                    <!-- <img data-aos="fade-right" data-aos-duration="1000" src="./resources/pos-img2.png" alt="" /> -->
+                    <div data-aos="fade-up" data-aos-duration="1000" data-aos-anchor-placement="top-bottom">
+                        <p>
+                            We cater RETAILER / WHOLESALER / F&B / RESTAURANT businesses.
+                        </p>
+                        <p><i class="bi bi-check-lg"></i>CASH ON DELIVERY NATIONWIDE</p>
+                        <p><i class="bi bi-check-lg"></i>ONE TIME PAYMENT ONLY</p>
+                        <p><i class="bi bi-check-lg"></i>FREE TRAINING (actual training)</p>
+                        <p><i class="bi bi-check-lg"></i>FREE INSTALLATION</p>
+                        <p><i class="bi bi-check-lg"></i>FREE THERMAL PAPER</p>
+                        <p><i class="bi bi-check-lg"></i>TECHNICAL & AFTER SALES SUPPORT</p>
+                        <p><i class="bi bi-check-lg"></i>WITH WARRANTY</p>
+                        <p>
+                            For more details and proof of transactions you may reach us on
+                            our social media accounts.
+                        </p>
+                        <button onclick="location.href='#contact'" data-aos="fade-right" data-aos-duration="1000">
+                            <span>Contact us</span>
+                            <svg width="34" height="34" viewBox="0 0 74 74" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                                <path
+                                    d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                                    fill="black">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="services-img" data-aos="fade-left" data-aos-duration="1000"
+                    data-aos-anchor-placement="top-bottom">
+                      <!-- Swiper -->
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="./resources/female-img.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./resources/female-img2.png" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="./resources/female-img3.png" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="head-bot"></div>
+        </section>
+        
+        <!-- PACKAGES -->
+        <section class="packages" id="packages">
+            <div class="heading-text">
+                <h1>PACKAGES</h1>
+                <h2 data-aos="fade-right" data-aos-delay="100" class="head-highlight">
+                    Our Products
+                </h2>
+            </div>
+            <div class="packages-info" data-aos="fade-right" data-aos-delay="100">
+                <div class="swiper mySwiper swiper-coverflow swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
+                    <div class="swiper-wrapper"  id="swiper-wrapper-e867e0685ab1e233" aria-live="polite"
+                        style="cursor: grab; transition-duration: 0ms; transform: translate3d(-630px, 0px, 0px);">
+                        <div class="swiper-slide" role="group" aria-label="1 / 5"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(150deg) scale(1); z-index: -2;">
+                            <img class="modal-target" src="./resources/packagea.jpg" alt="" srcset="" />
+                            <div class="swiper-slide-shadow-left" style="opacity: 3; transition-duration: 0ms;"></div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="2 / 5"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(150deg) scale(1); z-index: -2;">
+                            <img class="modal-target" src="./resources/packageb.jpg" alt="" srcset="" />
+                            <div class="swiper-slide-shadow-left" style="opacity: 3; transition-duration: 0ms;"></div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="3 / 5"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(150deg) scale(1); z-index: -2;">
+                            <img class="modal-target" src="./resources/packagec.jpg" alt="" srcset="" />
+                            <div class="swiper-slide-shadow-left" style="opacity: 3; transition-duration: 0ms;"></div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="4 / 5"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(150deg) scale(1); z-index: -2;">
+                            <img class="modal-target" src="./resources/package1.jpg" alt="" srcset="" />
+                            <div class="swiper-slide-shadow-left" style="opacity: 3; transition-duration: 0ms;"></div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                        <div class="swiper-slide" role="group" aria-label="5 / 5"
+                            style="transition-duration: 0ms; transform: translate3d(0px, 0px, -300px) rotateX(0deg) rotateY(150deg) scale(1); z-index: -2;">
+                            <img class="modal-target"  src="./resources/package2.jpg" alt="" srcset="" />
+                            <div class="swiper-slide-shadow-left" style="opacity: 3; transition-duration: 0ms;"></div>
+                            <div class="swiper-slide-shadow-right" style="opacity: 0; transition-duration: 0ms;"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+
+        <!-- features -->
+        <!-- POS ADVANTAGE -->
+        <section class="pos-adv" id="Pos">
+            <div class="pos-adv-wrapper">
+                <div class="adv-header-wrapper">
+                    <h2>ADVANTAGE OF POS</h2>
+                </div>
+                <div class="adv-content ">
+                    <div class="rel" data-aos="zoom-in" data-aos-delay="100" >
+                        <h3>P O S</h3>
+                    </div>
+                    <div class="adv-item adv-realtime" data-aos="fade-right" data-aos-delay="500">
+                        <div class="adv-item-wrapper">
+                            <div class="icon-wrapper">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            <h2>Get real-time Reports and Data</h2>
+                        </div>
+                    </div>
+                    <div class="adv-item adv-func" data-aos="fade-right" data-aos-delay="500">
+                        <div class="adv-item-wrapper">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-computer"></i>
+                            </div>
+                            <h2>Save Time, Energy and Money</h2>
+                        </div>
+                    </div>
+                    <div class="adv-item adv-human-err" data-aos="fade-right" data-aos-delay="500">
+                        <div class="adv-item-wrapper">
+                            <div class="icon-wrapper">
+                                <i class="fa-sharp fa-solid fa-circle-exclamation"></i>
+                            </div>
+                            <h2>Reduce or Elimanate Human Error and Theft</h2>
+                        </div>
+                    </div>
+                    <div class="adv-center-item">
+                        <div class="adv-item-wrapper">
+                        </div>
+                    </div>
+                    <div class="adv-item adv-user-exp" data-aos="fade-left" data-aos-delay="500">
+                        <div class="adv-item-wrapper">
+                            <div class="icon-wrapper">
+                                <i class="fa-regular fa-thumbs-up"></i>
+                            </div>
+                            <h2>Improve Customer experience</h2>
+                        </div>
+                    </div>
+                    <div class="adv-item adv-inventory-mngmnt" data-aos="fade-left" data-aos-delay="500">
+                        <div class="adv-item-wrapper">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-list-check"></i>
+                            </div>
+                            <h2>Inventory Management</h2>
+                        </div>
+                    </div>
+                    <div class="adv-item adv-efficient" data-aos="fade-left" data-aos-delay="500">
+                        <div class="adv-item-wrapper">
+                            <div class="icon-wrapper">
+                                <i class="fa-solid fa-gears"></i>
+                            </div>
+                            <h2>Encrease Functionality and Ease of Use</h2>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pos-adv2">
+            <div class="content">
+                <div class="img-container">
+                    <div class="img">
+                        <div class="shape"></div>
+                        <div class="img1" data-aos="zoom-in" data-aos-delay="100">
+                            <span></span>
+                        </div>
+                        <div class="img2" data-aos="zoom-in" data-aos-delay="100">
+                    </div>
+                </div>
+                </div>
+                <div class="text" data-aos="fade-right" data-aos-delay="100">
+                    <h1>POINT OF SALE ADVANTAGE</h1>
+                    <div class="adv-items2">
+                        <i class="bi bi-clock"></i>
+                        <p>Get real-time Reports and Data</p>
+                    </div>
+                    <div class="adv-items2">
+                        <i class="bi bi-pc-display"></i>
+                        <p>Save Time, Energy and Money</p>
+                    </div>
+                    <div class="adv-items2">
+                        <i class="bi bi-exclamation-circle-fill"></i>
+                        <p>Reduce or Elimanate Human Error and Theft</p>
+                    </div>
+                    <div class="adv-items2">
+                        <i class="bi bi-hand-thumbs-up-fill"></i>
+                        <p>Improve Customer experience</p>
+                    </div>
+                    <div class="adv-items2">
+                        <i class="bi bi-list-check"></i>
+                        <p>Inventory Management</p>
+                    </div>
+                    <div class="adv-items2">
+                        <i class="bi bi-gear"></i>
+                        <p>Increase Functionality and Ease of Use</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <!-- POS ANDROID & WEB -->
+            <section class="pos" id="and-web" >
+                <div class="headerHandler">
+                    <div class="header-wrapper">
+                        <div class="pos-heading ">
+                            <h2>Android Based</h2>
+                        </div>
+                        <div class="pos-heading">
+                            <h2>Window Based</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="pos-wrapper">
+                    <div class=" android-based" id="android-based">
+                        <div class=" android normal">
+                            <div class="android-horizontal">
+                                <div class="pos-image" data-aos="fade-left" data-aos-delay="100">
+                                    <img src="./resources/head-img.jpg"   alt="androidBase">
+                                </div>
+                                <div class="pos-ft" data-aos="fade-left" data-aos-delay="300">
+                                    <h3>MOBILE POS System</h3>
+                                    <p>
+                                        A mobile POS system is a portable and modern point-of-sale solution that runs on mobile
+                                        devices.
+                                        It allows sales associates to serve customers while they shop by checking inventory, making
+                                        recommendations, and accessing customer
+                                        profiles from a handheld device.</p>
+                                    <ul>
+                                        <li><i class="bi bi-check-lg"></i> User Friendly</li>
+                                        <li><i class="bi bi-check-lg"></i> integratable</li>
+                                        <li><i class="bi bi-check-lg"></i> Inventory and Sales Management</li>
+                                        <li><i class="bi bi-check-lg"></i> Customizable</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                            <!-- FEATURE RESTO RETAIL -->
+                            <section class="feature" id="feature">
+                                <div class="features-radio">
+                                    <label class="radio-custom active-ft" id="restoFtBtn">
+                                        <input type="radio" name="display-option" value="resto" />
+                                        <span class="radio-label">Resto / F&B System Features NON-BIR</span>
+                                    </label>
+                                    <label class="radio-custom" id="retailFtBtn">
+                                        <input type="radio" name="display-option" value="retail" />
+                                        <span class="radio-label">System Features NON-BIR RETAIL</span>
+                                    </label>
+                                </div>
+                            
+                                <div id="restoFt">
+                                    <div class="restoFt">
+                                        <div class="heading-text">
+                                            <h1 class="animate__bounceIn animate__lightSpeedInLeft">Resto / F&B System Features NON-BIR
+                                            </h1>
+                                            <h2 data-aos="fade-left" data-aos-delay="100"class="head-highlight">
+                                                Ease your business management
+                                            </h2>
+                                        </div>
+                                        <div class="features-info-desktop animate__bounceIn animate__bounceInLeft" data-aos="fade-left" data-aos-delay="300">
+                                            <div class="features-wrapper">
+                                                <div class="first-half">
+                                                    <div class="ft-item ft-item-bg">
+                                                        <!-- <img src="./resources/collaboration.jpg" style="object-fit: cover;" alt="collab"> -->
+                                                    </div>
+                                                    <div class="ft-item ft-item-RW">
+                                                        <div class="ul-wrapper">
+                                                            <h3>Remote</h3>
+                                                            <p>Can view your Business Reports & Transactions anywhere via Remote Assistance (For IMIN Package only).</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ft-item ft-item-int">
+                                                        <div class="ul-wrapper">
+                                                            <h3>interface</h3>
+                                                            <ul>
+                                                                <li>Business Logo/Name</li>
+                                                                <li>Users Account & Security</li>
+                                                                <li>Database</li>
+                                                                <li>Auto Back-up Database</li>
+                                                                <li>Disable & Enable Feature</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ft-item ft-item-remote">
+                                                        <div class="ul-wrapper">
+                                                            <h3>Retail & WholeSale</h3>
+                                                            <ul>
+                                                                <li>Receipt Cashier Print</li>
+                                                                <li>kitchen/Bar Order Print</li>
+                                                                <li>Label/Sticker Print</li>
+                                                                <li>Dine-in</li>
+                                                                <li>Take-out</li>
+                                                                <li>Delivery</li>
+                                                            </ul>
+                                                        </div>
+                                                        <ul>
+                                                    </div>
+                                                    <div class="ft-item ft-item-disc">
+                                                        <div class="ul-wrapper">
+                                                            <h3> discounts</h3>
+                                                            <ul>
+                                                                <li>Percentage Discount</li>
+                                                                <li>Amout Discount</li>
+                                                                <li>Per Item Discount</li>
+                                                                <li>Total Price Discount</li>
+                                                                <li>Surcharge</li>
+                                                                <li>Senior Citizen</li>
+                                                                <li>PWD</li>
+                                                                <li>Membership</li>
+                                                                <li>Point System</li>
+                                                                <li>Membership Details</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="second-half">
+                                                    <div class="ft-item2 ft-item-cf">
+                                                        <div class="ul-wrapper">
+                                                            <h3>cash flow</h3>
+                                                            <ul>
+                                                                <li>Pay In/Pay Out</li>
+                                                                <li>Expenses</li>
+                                                                <li>Pay Later</li>
+                                                                <li>Mode of Payment</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ft-item2 ft-item-inv">
+                                                        <div class="ul-wrapper">
+                                                            <h3>inventory</h3>
+                                                            <ul>
+                                                                <li>Basic Inventory</li>
+                                                                <li>Standard Inventory</li>
+                                                                <li>Advance Inventory</li>
+                                                                <li>inventory Warehouse</li>
+                                                                <li>Inventory Vendor</li>
+                                                                <li>Purchase Inventory</li>
+                                                                <li>Return Inventory</li>
+                                                                <li>Adjust Cost</li>
+                                                                <li>Analyze Inventory</li>
+                                                                <li>Operation Record</li>
+                                                                <div class="outlined">
+                                                                    <p>Once items is punched in check-out system will automatically deduct the item
+                                                                        in the inventory</p>
+                                                                </div>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ft-item2 ft-item-report">
+                                                        <div class="ul-wrapper">
+                                                            <h3>reports</h3>
+                                                            <ul>
+                                                                <li>Company Report</li>
+                                                                <li>Sales Report</li>
+                                                                <li>Payment</li>
+                                                                <li>Discount</li>
+                                                                <li>Cash Sales</li>
+                                                                <li>Staff Sales</li>
+                                                                <li>Cashier</li>
+                                                                <li>Delivery Report</li>
+                                                                <li>Profit</li>
+                                                                <li>Expenses</li>
+                                                                <li>Cash Close Out</li>
+                                                                <li>Statistic</li>
+                                                                <li>Category Amount</li>
+                                                                <li>Category Quantity</li>
+                                                                <li>Item Purchase</li>
+                                                                <li>Inventory</li>
+                                                                <li>Staff Report</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="features-info-mobile animate__bounceIn animate__bounceInLeft" data-aos="fade-left" data-aos-delay="300">
+                                        <img src="./resources/collaboration.jpg" style="object-fit: cover;" alt="collab">
+                                        <div class="item-yellow">
+                                            <div class="resto-content-remote">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Remote</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right resto-remote-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <p>Can view your Business Reports & Transactions anywhere via Remote Assistance (For IMIN Package only).</p>
+                                            </div>
+                                        </div>
+                                        <div class="item-black">
+                                            <div class="resto-content-interface">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Interface</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right resto-interface-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Business Logo/Name</li>
+                                                    <li>Users Account & Security</li>
+                                                    <li>Database</li>
+                                                    <li>Auto Back-up Database</li>
+                                                    <li>Disable & Enable Feature</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item-yellow">
+                                            <div class="resto-content-retailandwholesale">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Retail and Wholesale</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right resto-randw-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Receipt Cashier Print</li>
+                                                    <li>kitchen/Bar Order Print</li>
+                                                    <li>Label/Sticker Print</li>
+                                                    <li>Dine-in</li>
+                                                    <li>Take-out</li>
+                                                    <li>Delivery</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item-black">
+                                            <div class="resto-content-discounts">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Discounts</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right resto-discounts-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Percentage Discount</li>
+                                                    <li>Amout Discount</li>
+                                                    <li>Per Item Discount</li>
+                                                    <li>Total Price Discount</li>
+                                                    <li>Surcharge</li>
+                                                    <li>Senior Citizen</li>
+                                                    <li>PWD</li>
+                                                    <li>Membership</li>
+                                                    <li>Point System</li>
+                                                    <li>Membership Details</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item-yellow">
+                                            <div class="resto-content-inventory">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Inventory</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right resto-inventory-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Basic Inventory</li>
+                                                    <li>Standard Inventory</li>
+                                                    <li>Advance Inventory</li>
+                                                    <li>inventory Warehouse</li>
+                                                    <li>Inventory Vendor</li>
+                                                    <li>Purchase Inventory</li>
+                                                    <li>Return Inventory</li>
+                                                    <li>Adjust Cost</li>
+                                                    <li>Analyze Inventory</li>
+                                                    <li>Operation Record</li>
+                                                    <li class="outlined">Once items is punched in check-out system will automatically deduct the item in the inventory</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item-black">
+                                            <div class="resto-content-cashflow">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Cash Flow</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right resto-cashflow-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Pay In/Pay Out</li>
+                                                    <li>Expenses</li>
+                                                    <li>Pay Later</li>
+                                                    <li>Mode of Payment</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item-yellow">
+                                            <div class="resto-content-reports">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Reports</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right resto-reports-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Company Report</li>
+                                                    <li>Sales Report</li>
+                                                    <li>Payment</li>
+                                                    <li>Discount</li>
+                                                    <li>Cash Sales</li>
+                                                    <li>Staff Sales</li>
+                                                    <li>Cashier</li>
+                                                    <li>Delivery Report</li>
+                                                    <li>Profit</li>
+                                                    <li>Expenses</li>
+                                                    <li>Cash Close Out</li>
+                                                    <li>Statistic</li>
+                                                    <li>Category Amount</li>
+                                                    <li>Category Quantity</li>
+                                                    <li>Item Purchase</li>
+                                                    <li>Inventory</li>
+                                                    <li>Staff Report</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div id="retailFt">
+                                    <div class="retailFt">
+                                        <div class="heading-text">
+                                            <h1 class="animate__bounceIn animate__lightSpeedInRight">System Features NON-BIR RETAIL</h1>
+                                            <h2 data-aos="fade-left" data-aos-delay="100" class="head-highlight">
+                                                Ease your business management
+                                            </h2>
+                                        </div>
+                                        <div class="features-info-desktop animate__bounceIn animate__bounceInRight" data-aos="fade-left" data-aos-delay="300">
+                                            <div class="features-wrapper">
+                                                <div class="first-half">
+                                                    <div class="ft-item ft-item-bg">
+                                                        <img src="./resources/collaboration2.jpg" style="object-fit: cover;" alt="collab">
+                                                    </div>
+                                                    <div class="ft-item ft-item-RW">
+                                                        <div class="ul-wrapper">
+                                                            <h3>Retail & WholeSale</h3>
+                                                            <p>Can input Retail Price, Whole Sale Price & other Special Price for member or VIP.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ft-item ft-item-int">
+                                                        <div class="ul-wrapper">
+                                                            <h3>interface</h3>
+                                                            <ul>
+                                                                <li>Business Logo/Name</li>
+                                                                <li>Users Account & Security</li>
+                                                                <li>Database</li>
+                                                                <li>Auto Back-up Database</li>
+                                                                <li>Disable & Enable Feature</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ft-item ft-item-remote">
+                                                        <div class="ul-wrapper">
+                                                            <h3>Remote</h3>
+                                                            <p>Can view your Business Reports & Transactions anywhere via Remote Assistance.</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ft-item ft-item-disc">
+                                                        <div class="ul-wrapper">
+                                                            <h3>discounts</h3>
+                                                            <ul>
+                                                                <li>Percentage Discount</li>
+                                                                <li>Amout Discount</li>
+                                                                <li>Per Item Discount</li>
+                                                                <li>Total Price Discount</li>
+                                                                <li>Surcharge</li>
+                                                                <li>Senior Citizen</li>
+                                                                <li>PWD</li>
+                                                                <li>Membership</li>
+                                                                <li>Point System</li>
+                                                                <li>Membership Details</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ft-item ft-item-bar">
+                                                        <div class="ul-wrapper">
+                                                            <h3>Barcode Generator</h3>
+                                                            <p>For item without barcode we will provide FREE Barcode System.</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="second-half">
+                                                    <div class="ft-item2 ft-item-cf">
+                                                        <div class="ul-wrapper">
+                                                            <h3>cash flow</h3>
+                                                            <ul>
+                                                                <li>Pay In/Pay Out</li>
+                                                                <li>Expenses</li>
+                                                                <li>Pay Later</li>
+                                                                <li>Mode of Payment</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ft-item2 ft-item-inv">
+                                                        <div class="ul-wrapper">
+                                                            <h3>inventory</h3>
+                                                            <ul>
+                                                                <li>Basic Inventory</li>
+                                                                <li>Standard Inventory</li>
+                                                                <li>inventory Warehouse</li>
+                                                                <li>Inventory Vendor</li>
+                                                                <li>Purchase Inventory</li>
+                                                                <li>Return Inventory</li>
+                                                                <li>Adjust Cost</li>
+                                                                <li>Analyze Inventory</li>
+                                                                <li>Operation Record</li>
+                                                                <div class="outlined">
+                                                                    <p>Once items is punched in check-out system will automatically deduct the item
+                                                                        in the inventory</p>
+                                                                </div>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="ft-item2 ft-item-report">
+                                                        <div class="ul-wrapper">
+                                                            <h3>reports</h3>
+                                                            <ul>
+                                                                <li>Company Report</li>
+                                                                <li>Sales Report</li>
+                                                                <li>Payment</li>
+                                                                <li>Discount</li>
+                                                                <li>Cash Sales</li>
+                                                                <li>Staff Sales</li>
+                                                                <li>Cashier</li>
+                                                                <li>Delivery Report</li>
+                                                                <li>Profit</li>
+                                                                <li>Expenses</li>
+                                                                <li>Cash Close Out</li>
+                                                                <li>Statistic</li>
+                                                                <li>Category Amount</li>
+                                                                <li>Category Quantity</li>
+                                                                <li>Item Purchase</li>
+                                                                <li>Inventory</li>
+                                                                <li>Staff Report</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="features-info-mobile animate__bounceIn animate__bounceInRight">
+                                        <img src="./resources/collaboration2.jpg" style="object-fit: cover;" alt="collab">
+                                        <div class="item-yellow">
+                                            <div class="retail-content-remote">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Remote</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right retail-remote-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <p>Can view your Business Reports & Transactions anywhere via Remote Assistance.</p>
+                                            </div>
+                                        </div>
+                                        <div class="item-black">
+                                            <div class="retail-content-interface">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Interface</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right retail-interface-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Business Logo/Name</li>
+                                                    <li>Users Account & Security</li>
+                                                    <li>Database</li>
+                                                    <li>Auto Back-up Database</li>
+                                                    <li>Disable & Enable Feature</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item-yellow">
+                                            <div class="retail-content-retailandwholesale">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Retail and Wholesale</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right retail-randw-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <p>Can input Retail Price, Whole Sale Price & other Special Price for member or VIP.</p>
+                                            </div>
+                                        </div>
+                                        <div class="item-black">
+                                            <div class="retail-content-discounts">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Discounts</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right retail-discounts-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Percentage Discount</li>
+                                                    <li>Amout Discount</li>
+                                                    <li>Per Item Discount</li>
+                                                    <li>Total Price Discount</li>
+                                                    <li>Surcharge</li>
+                                                    <li>Senior Citizen</li>
+                                                    <li>PWD</li>
+                                                    <li>Membership</li>
+                                                    <li>Point System</li>
+                                                    <li>Membership Details</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item-yellow">
+                                            <div class="retail-content-inventory">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Inventory</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right retail-inventory-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Basic Inventory</li>
+                                                    <li>Standard Inventory</li>
+                                                    <li>inventory Warehouse</li>
+                                                    <li>Inventory Vendor</li>
+                                                    <li>Purchase Inventory</li>
+                                                    <li>Return Inventory</li>
+                                                    <li>Adjust Cost</li>
+                                                    <li>Analyze Inventory</li>
+                                                    <li>Operation Record</li>
+                                                    <li class="outlined">Once items is punched in check-out system will automatically deduct the item in the
+                                                        inventory</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item-black">
+                                            <div class="retail-content-cashflow">
+                                                <div class="features-infopos adv-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Cash Flow</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right retail-cashflow-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Pay In/Pay Out</li>
+                                                    <li>Expenses</li>
+                                                    <li>Pay Later</li>
+                                                    <li>Mode of Payment</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item-yellow">
+                                            <div class="retail-content-reports">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Reports</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right retail-reports-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <ul>
+                                                    <li>Company Report</li>
+                                                    <li>Sales Report</li>
+                                                    <li>Payment</li>
+                                                    <li>Discount</li>
+                                                    <li>Cash Sales</li>
+                                                    <li>Staff Sales</li>
+                                                    <li>Cashier</li>
+                                                    <li>Delivery Report</li>
+                                                    <li>Profit</li>
+                                                    <li>Expenses</li>
+                                                    <li>Cash Close Out</li>
+                                                    <li>Statistic</li>
+                                                    <li>Category Amount</li>
+                                                    <li>Category Quantity</li>
+                                                    <li>Item Purchase</li>
+                                                    <li>Inventory</li>
+                                                    <li>Staff Report</li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="item-black">
+                                            <div class="retail-content-barcode">
+                                                <div class="features-info-mobile-item-header">
+                                                    <div class="header-title">
+                                                        <h3>Barcode Generator</h3>
+                                                    </div>
+                                                    <div class="header-icon">
+                                                        <i class="fa-sharp fa-solid fa-chevron-right retail-barcode-icon"></i>
+                                                    </div>
+                                                </div>
+                                                <p>For item without barcode we will provide FREE Barcode System.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>  
+                    </div>
+                    <div class="window-based"  id="window-based">
+                        <div class=" android normal">
+                            <div class="android-horizontal">
+                                <div class="pos-image" data-aos="fade-left" data-aos-delay="100">
+                                    <img src="./resources/windowPkg.png" alt="windowbased">
+                                </div>
+                                <div class="pos-ft" data-aos="fade-left" data-aos-delay="300">
+                                    <h3>Window POS System</h3>
+                                    <p>A Windows-based POS system is a point-of-sale software that runs on a Windows operating
+                                        system,
+                                        providing businesses with a reliable and efficient solution for managing transactions and
+                                        inventory.</p>
+                                    <ul>
+                                        <li><i class="bi bi-check-lg"></i>User Friendly </li>
+                                        <li><i class="bi bi-check-lg"></i>integratable </li>
+                                        <li><i class="bi bi-check-lg"></i>Inventory and Sales Management </li>
+                                        <li><i class="bi bi-check-lg"></i>Customizable </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="web-sec-ft" id="web-sec-ft">
+                            <div class="heading-windows">
+                                <h1 class="animate__bounceIn animate__lightSpeedInRight">Windows Based Retail / Wholesale POS <br> NON-BIR/NON VAT
+                                </h1>
+                                <h2 data-aos="fade-left" data-aos-delay="100"class="head-windows animate__bounceIn animate__lightSpeedInRight">
+                                SYSTEM FEATURES
+                                </h2>
+                            </div>
+                            <div class="win-change windows-grid animate__bounceIn animate__bounceInRight">
+                                <div class="windows-item item-IM"></div>
+                                <div class="windows-item item-dashb"></div>
+                                <div class="windows-item item-SRM"></div>
+                                <div class="windows-item item-SM"></div>
+                                <div class="windows-item item-PM"></div>
+                                <div class="windows-item item-CM"></div>
+                                <div class="windows-item item-SS"></div>
+                                <div class="windows-item item-Crt"></div>
+                                <div class="windows-item item-Of"></div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </section>
+
+        <!-- CLIENTS -->
+        <section class="clients" id="clients">
+            <div class="heading-text">
+                <h1>CLIENTS</h1>
+                <h2 data-aos="fade-right" data-aos-delay="100" class="head-highlight">
+                    Our Clients love us
+                </h2>
+            </div>
+            <div class="clients-info">
+                <div class="clients-left" data-aos="fade-right" data-aos-delay="100">
+                    <div class="clients-img">
+                        <div class="swiper mySwiper2 swiper-cards swiper-3d swiper-initialized swiper-horizontal swiper-watch-progress">
+                            <div class="swiper-wrapper" id="swiper-wrapper-d35f78a619106d9102" aria-live="polite"
+                                style="cursor: grab; transition-duration: 0ms;">
+                                <div class="swiper-slide swiper-slide-visible swiper-slide-active" role="group" aria-label="1 / 9"
+                                    style="width: 240px; z-index: 9; transform: translate3d(0px, 0px, 0px) rotateZ(0deg) scale(1); transition-duration: 0ms;">
+                                    <img class="clients-item modal-target" src="./clients/client1.jpg" alt="" />
+                                    <div class="swiper-slide-shadow" style="opacity: 0; transition-duration: 0ms;"></div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 9"
+                                    style="width: 240px; z-index: 8; transform: translate3d(calc(-240px + 7.25%), 0px, -100px) rotateZ(2deg) scale(1); transition-duration: 0ms;">
+                                    <img class="clients-item modal-target" src="./clients/client2.jpg" alt="" />
+                                    <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;"></div>
+                                </div>
+                                <div class="swiper-slide" role="group" aria-label="3 / 9"
+                                    style="width: 240px; z-index: 7; transform: translate3d(calc(-480px + 13%), 0px, -200px) rotateZ(4deg) scale(1); transition-duration: 0ms;">
+                                    <img class="clients-item modal-target" src="./clients/client3.jpg" alt="" />
+                                    <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;"></div>
+                                </div>
+                                <div class="swiper-slide" role="group" aria-label="4 / 9"
+                                    style="width: 240px; z-index: 6; transform: translate3d(calc(-720px + 17.25%), 0px, -300px) rotateZ(6deg) scale(1); transition-duration: 0ms;">
+                                    <img class="clients-item modal-target" src="./clients/client4.jpg" alt="" />
+                                    <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;"></div>
+                                </div>
+                                <div class="swiper-slide" role="group" aria-label="5 / 9"
+                                    style="width: 240px; z-index: 5; transform: translate3d(calc(-960px + 20%), 0px, -400px) rotateZ(8deg) scale(1); transition-duration: 0ms;">
+                                    <img class="clients-item modal-target" src="./clients/client5.jpg" alt="" />
+                                    <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;"></div>
+                                </div>
+                                <div class="swiper-slide" role="group" aria-label="6 / 9"
+                                    style="width: 240px; z-index: 4; transform: translate3d(calc(-1200px + 20%), 0px, -400px) rotateZ(8deg) scale(1); transition-duration: 0ms;">
+                                    <img class="clients-item modal-target" src="./clients/client6.jpg" alt="" />
+                                    <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;"></div>
+                                </div>
+                                <div class="swiper-slide" role="group" aria-label="7 / 9"
+                                    style="width: 240px; z-index: 3; transform: translate3d(calc(-1440px + 20%), 0px, -400px) rotateZ(8deg) scale(1); transition-duration: 0ms;">
+                                    <img class="clients-item modal-target" src="./clients/client7.jpg" alt="" />
+                                    <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;"></div>
+                                </div>
+                                <div class="swiper-slide" role="group" aria-label="8 / 9"
+                                    style="width: 240px; z-index: 2; transform: translate3d(calc(-1680px + 20%), 0px, -400px) rotateZ(8deg) scale(1); transition-duration: 0ms;">
+                                    <img class="clients-item modal-target" src="./clients/client8.jpg" alt="" />
+                                    <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;"></div>
+                                </div>
+                                <div class="swiper-slide" role="group" aria-label="9 / 9"
+                                    style="width: 240px; z-index: 1; transform: translate3d(calc(-1920px + 20%), 0px, -400px) rotateZ(8deg) scale(1); transition-duration: 0ms;">
+                                    <img class="clients-item modal-target" src="./clients/client9.jpg" alt="" />
+                                    <div class="swiper-slide-shadow" style="opacity: 1; transition-duration: 0ms;"></div>
+                                </div>
+                            </div>
+                            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+                        </div>
+                    </div>
+                    <button onclick="location.href='./pages/allclients.html'" data-aos="fade-up"
+                        data-aos-duration="1000">
+                        <span>Show more</span>
+                        <svg width="34" height="34" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="37" cy="37" r="35.5" stroke="black" stroke-width="3"></circle>
+                            <path
+                                d="M25 35.5C24.1716 35.5 23.5 36.1716 23.5 37C23.5 37.8284 24.1716 38.5 25 38.5V35.5ZM49.0607 38.0607C49.6464 37.4749 49.6464 36.5251 49.0607 35.9393L39.5147 26.3934C38.9289 25.8076 37.9792 25.8076 37.3934 26.3934C36.8076 26.9792 36.8076 27.9289 37.3934 28.5147L45.8787 37L37.3934 45.4853C36.8076 46.0711 36.8076 47.0208 37.3934 47.6066C37.9792 48.1924 38.9289 48.1924 39.5147 47.6066L49.0607 38.0607ZM25 38.5L48 38.5V35.5L25 35.5V38.5Z"
+                                fill="black"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="message-clients" data-aos="fade-right" data-aos-delay="300"> 
+                    <p>
+                        We hope this message finds you well. On behalf of AffordaPOS, I
+                        would like to express our sincerest gratitude for your continued
+                        patronage and support.
+                    </p>
+                    <br />
+                    <p>
+                        At AffordaPOS, we understand the importance of delivering
+                        exceptional products and services to our clients, and we are
+                        committed to maintaining the highest standards of quality in
+                        everything we do. Our team is dedicated to ensuring that our
+                        clients receive the best possible experience, and we are
+                        constantly striving to improve our offerings in order to better
+                        meet your needs.
+                    </p>
+                    <br />
+                    <p>
+                        As a valued client, your feedback is important to us. We encourage
+                        you to reach out to us with any questions, comments, or concerns
+                        you may have. Our goal is to provide you with the best possible
+                        service, and we are always looking for ways to improve our
+                        offerings and better serve you.
+                    </p>
+                    <br />
+                    <p>
+                        In conclusion, thank you for choosing AffordaPOS as your trusted
+                        provider. We look forward to continuing our relationship and
+                        working together to achieve even greater success in the future.
+                    </p>
+                </div>
+            </div>
+            <i class="bi bi-chat-quote-fill clients-icon"></i>
+        </section>
+
+        <!-- PAYMENT -->
+        <section class="payment">
+            <div class="heading-text">
+                <h1>PAYMENT</h1>
+                <h2 data-aos="fade-left" data-aos-delay="100">
+                    Our mode of payment
+                </h2>
+            </div>
+            <div class="payment-info">
+                <div class="payment-text" data-aos="fade-up" data-aos-delay="100">
+                    <h3>You can pay through</h3>
+                    <p><i class="bi bi-check-lg"></i>CASH</p>
+                    <p><i class="bi bi-check-lg"></i>G-CASH</p>
+                    <p><i class="bi bi-check-lg"></i>BANK TRANSFER</p>
+                    <p><i class="bi bi-check-lg"></i>CREDIT CARD</p>
+                    <br />
+                    <h3>Installment (BUY NOW, PAY LATER)</h3>
+                    <p><i class="bi bi-check-lg"></i>Billease</p>
+                    <p><i class="bi bi-check-lg"></i>Atome</p>
+                    <p><i class="bi bi-check-lg"></i>Gcredit</p>
+                    <p><i class="bi bi-check-lg"></i>In-House Financing (SOON)</p>
+                </div>
+                <div class="payment-partners">
+                    <img data-aos="fade-up" data-aos-delay="100" src="./resources/gcash.png" class="payment-method"
+                        alt="" />
+                    <img data-aos="fade-up" data-aos-delay="100" src="./resources/mastercard.png" alt="" srcset=""
+                        class="payment-method" />
+                    <img data-aos="fade-up" data-aos-delay="100" src="./resources/visa.png" alt="" srcset=""
+                        class="payment-method" />
+                    <img data-aos="fade-up" data-aos-delay="100" src="./resources/atome.png" alt="" srcset=""
+                        class="payment-method" />
+                    <img data-aos="fade-up" data-aos-delay="100" src="./resources/billease.png" alt="" srcset=""
+                        class="payment-method" />
+                    <img data-aos="fade-up" data-aos-delay="100" src="./resources/gcredit.png" alt="" srcset=""
+                        class="payment-method" />
+                </div>
+            </div>
+            <!-- <i class="bi bi-cash-coin payment-icon"></i> -->
+        </section>
+
+        <!-- CONTACT US -->
+        <section class="contact-us" id="contact">
+            <div class="heading-text">
+                <h1>CONTACT US</h1>
+                <h2 data-aos="fade-right" data-aos-delay="100" class="head-highlight">
+                    We want to hear it from you
+                </h2>
+            </div>
+            <div class="contact-info">
+                <section class="footer_get_touch_outer">
+                    <div class="footer_get_touch_inner grid-70-30">
+                        <div class="colmun-70 get_form" data-aos="fade-right" data-aos-delay="100">
+                            <div class="get_form_inner">
+                                <div class="get_form_inner_text">
+                                    <h3>Get In Touch</h3>
+                                </div>
+                                <!-- modify this form HTML and place wherever you want your form -->
+                                <form action="https://formspree.io/f/mdovelje" method="POST">
+                                    <div class="grid-50-50">
+                                        <input name="firstname" type="text" placeholder="First Name" />
+                                        <input name="lastname" type="text" placeholder="Last Name" />
+                                        <input name="email" type="email" placeholder="Email" />
+                                        <input name="tel./mobile number" type="tel" placeholder="Phone" />
+                                    </div>
+                                    <div class="grid-full">
+                                        <textarea name="message" placeholder="Message" cols="30" rows="10"
+                                            style="resize: none"></textarea>
+                                        <button data-aos="fade-up" data-aos-delay="100" type="submit">
+                                            <span>Send</span>
+                                            <i class="bi bi-send"></i>
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="colmun-30 get_say_form" data-aos="fade-left" data-aos-delay="100">
+                            <h5>Say Hi!</h5>
+                            <ul class="get_say_info_sec">
+                                <li>
+                                    <a href="mailto:">affordaPOS@gmail.com</a>
+                                </li>
+                                <li>
+                                    <a href="tel:">09498408417</a>
+                                </li>
+                                <li>
+                                    <a href="#">AffordaPOS</a>
+                                </li>
+                                <div class="socmed">
+                                    <a href="https://www.facebook.com/affordablepointofsale"><i class="bi bi-facebook"></i></a>
+                                    <a href="https://www.tiktok.com/@affordapos?is_from_webapp=1&sender_device=pc"><i class="bi bi-tiktok"></i></a>
+                                    <a href="https://www.instagram.com/affordapos/"><i class="bi bi-instagram"></i></a>
+                                    <a href="https://twitter.com/AffordaPos"><i class="bi bi-twitter"></i></a>
+                                </div>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <section class="footer">
+            <h5>Copyright © 2023 AffordaPOS</h5>
+        </section>
+    </div>
+
+    <!-- The Modal Image -->
+    <div id="modal" class="modal">
+        <span id="modal-close" class="modal-close">&times;</span>
+        <img id="modal-content" class="modal-content animate__bounceIn" />
+        <div id="modal-caption" class="modal-caption"></div>
+    </div>
+
+    <!-- Messenger Chat Plugin Code -->
+    <div id="fb-root"></div>    
+
+    <!-- Your Chat Plugin code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <!-- javascript -->
+    <script src="./index.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script>
+        AOS.init();
+            var swiper9 = new Swiper(".services-img .mySwiper", {
+                spaceBetween:30,
+                effect: "creative",
+                creativeEffect: {
+                prev: {
+                    opacity: 0,
+                },
+                next: {
+                    opacity: 0,
+                },
+            },
+                autoplay: {
+                    delay: 1500,
+                    disableOnInteraction: false,
+                },
+            });
+        
+            var swiper1 = new Swiper(".packages-info .mySwiper", {
+                effect: "coverflow",
+                grabCursor: true,
+                spaceBetween:30,
+                slidesPerView: "auto",
+                centeredSlides: true,
+                coverflowEffect: {
+                    rotate: 0,
+                    stretch: 0,
+                    depth: 0,
+                    modifier: 1,
+                    slideShadows: true,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                delay: 2000,
+                },
+            });
+            
+            var swiper2 = new Swiper(".mySwiper2", {
+            effect: "cards",
+            grabCursor: true,
+            autoplay: {
+                delay: 2000,
+                },
+            });
+            
+            var swiper5 = new Swiper(".mySwiper5", {
+            slidesPerView: "auto",
+            grid: {
+                rows: 1.8,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+            },
+            });
+    </script>
+</body>
+
+</html>
