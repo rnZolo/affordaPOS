@@ -27,8 +27,16 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.bg{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  background-image: url('../resources/bg-body.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
 body {
-  background-color: #F1F1F1;
   -ms-overflow-style: none;
   /* IE and Edge */
   scrollbar-width: none;
