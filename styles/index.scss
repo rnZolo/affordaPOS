@@ -3492,6 +3492,7 @@ body[light-mode="dark"] .products-modal {
   width: 80%;
   font-size: 22px;
   text-align: end;
+  max-width: 1200px;
 }
 
 @media screen and (max-width:720px) {
@@ -3606,6 +3607,7 @@ body[light-mode="dark"] .products-modal {
     }
     .item-PM{
       order: 3;
+      height: fit-content;
     }
     .item-CM{
       order: 6;
